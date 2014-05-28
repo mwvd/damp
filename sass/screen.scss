@@ -1,0 +1,46 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+$one-color: rgba(188, 107, 107, 0.65);
+$two-color: rgba(185, 188, 107, 0.65);
+$three-color: rgba(107, 116, 188, 0.65);
+$thoustacks: 'Helvetica', Helvetica;
+
+@mixin boxflex {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-wrap: wrap;
+    
+    -webkit-box-align: center; 
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+
+    -webkit-box-pack: center; 
+    -moz-box-pack: center; 
+    -ms-flex-pack: center; 
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.ghoul {
+    @include boxflex;
+    background-color: #000;
+    font: $thoustacks;
+    color: #FFF;
+    width: 100%;
+    height: 100%;
+}
+
