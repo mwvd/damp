@@ -1,17 +1,38 @@
 Damp
 ================
 
-secret society magazine 2k14 // for online &amp; offline
-
-```init {
-    issue #1 : 0IL MONEY --- coming June 18th
-}```
+![alt text](https://github.com/mwvd/damp/assets/1.png "screen")
 
 
+a publishing experiment for a post-paper society
 
 
+print is falling off but it's still half exciting. this will be something leaner and more deliberate. i'm calling it '**damp**'
+
+i'm looking for artists, writers, and devs to contribute
+
+i want to integrate every experience - one page of composition & movement & ideas & maybe even secrets
 
 
+```
+
+damp magazine {
+    issue #1: oil money;
+    coming: june 18th;
+    }
+
+```
 
 
+hmu if you want to contribute: 
+send me a message or send me an email [send me an email](mailto:mwvdavidson@gmail.com "hmu")
+
+
+(◕‿◕✿)
 1994 - 201X
+
+
+
+Contributors:
+
+[mackenzie davidson](mvckenzie.com "come thru")
