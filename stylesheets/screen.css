@@ -67,18 +67,25 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 38, ../sass/screen.scss */
+/* line 8, ../sass/screen.scss */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 10, ../sass/screen.scss */
+html, body {
+  background-color: #FFF;
+  height: 100%;
+}
+
+/* line 40, ../sass/screen.scss */
 .ghoul {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  flex-direction: column;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-wrap: wrap;
   -webkit-box-align: center;
   -moz-box-align: center;
   -ms-flex-align: center;
@@ -89,9 +96,64 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  background-color: #000;
-  font: "Helvetica", Helvetica;
-  color: #FFF;
-  width: 100%;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  margin: 0;
   height: 100%;
+  width: 100%;
+  background-color: #1d00ff;
+  font-family: "Andale Mono", AndaleMono, Consolas, monaco monospace;
+  color: #FFF;
+}
+
+/* line 51, ../sass/screen.scss */
+.three05 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  width: 45%;
+  height: 3em;
+  border: 2px solid #FFF;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+/* line 60, ../sass/screen.scss */
+.tomycity {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  width: 45%;
+  height: 3em;
+  border: 2px solid #FFF;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }

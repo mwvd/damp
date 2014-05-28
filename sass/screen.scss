@@ -5,10 +5,14 @@
 
 @import "compass/reset";
 
-$one-color: rgba(188, 107, 107, 0.65);
-$two-color: rgba(185, 188, 107, 0.65);
-$three-color: rgba(107, 116, 188, 0.65);
-$thoustacks: 'Helvetica', Helvetica;
+* { margin: 0; padding: 0; }
+
+html, body {
+    background-color: #FFF;
+    height: 100%;
+}
+
+$cry-font: "Andale Mono", AndaleMono, Consolas, monaco monospace;
 
 @mixin boxflex {
     display: -webkit-box;
@@ -16,11 +20,6 @@ $thoustacks: 'Helvetica', Helvetica;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-    flex-direction: column;
-    -webkit-flex-direction: column;
-    -moz-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-wrap: wrap;
     
     -webkit-box-align: center; 
     -moz-box-align: center;
@@ -33,14 +32,36 @@ $thoustacks: 'Helvetica', Helvetica;
     -ms-flex-pack: center; 
     -webkit-justify-content: center;
     justify-content: center;
+    
+    -webkit-flex-direction: column;
+    flex-direction: column;
 }
 
 .ghoul {
     @include boxflex;
-    background-color: #000;
-    font: $thoustacks;
-    color: #FFF;
-    width: 100%;
+    margin: 0;
     height: 100%;
+    width: 100%;
+    
+    background-color: rgb(29, 0, 255);
+    font-family: $cry-font;
+    color: #FFF;
 }
 
+.three05 {
+    @include boxflex;
+    width: 45%;
+    height: 3em;
+    border: 2px solid #FFF;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.tomycity {
+    @include boxflex;
+    width: 45%;
+    height: 3em;
+    border: 2px solid #FFF;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
