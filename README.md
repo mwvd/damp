@@ -1,7 +1,7 @@
 Damp
 ================
 
-![alt text](https://github.com/mwvd/damp/blob/gh-pages/assets/1.png "screen")
+![alt text](https://raw.githubusercontent.com/mwvd/damp/gh-pages/assets/1.png "screen")
 
 
 a publishing experiment for a post-paper society
