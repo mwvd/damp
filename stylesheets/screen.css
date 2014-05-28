@@ -1,7 +1,3 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 /* line 17, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -67,19 +63,19 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 8, ../sass/screen.scss */
+/* line 3, ../sass/screen.scss */
 * {
   margin: 0;
   padding: 0;
 }
 
-/* line 10, ../sass/screen.scss */
+/* line 5, ../sass/screen.scss */
 html, body {
   background-color: #FFF;
   height: 100%;
 }
 
-/* line 40, ../sass/screen.scss */
+/* line 35, ../sass/screen.scss */
 .ghoul {
   display: -webkit-box;
   display: -moz-box;
@@ -106,7 +102,7 @@ html, body {
   color: #FFF;
 }
 
-/* line 51, ../sass/screen.scss */
+/* line 46, ../sass/screen.scss */
 .three05 {
   display: -webkit-box;
   display: -moz-box;
@@ -132,7 +128,7 @@ html, body {
   margin-bottom: 2%;
 }
 
-/* line 60, ../sass/screen.scss */
+/* line 55, ../sass/screen.scss */
 .tomycity {
   display: -webkit-box;
   display: -moz-box;
