@@ -1,4 +1,4 @@
-Maudlin-Magazine
+Damp
 ================
 
 secret society magazine 2k14 // for online &amp; offline
