@@ -125,33 +125,34 @@ html, body {
   height: 100%;
   width: 100%;
   position: fixed;
+  top: 0;
   z-index: 9;
 }
 
-/* line 56, ../sass/screen.scss */
+/* line 57, ../sass/screen.scss */
 #future {
   -webkit-animation: rotation 15s infinite linear;
 }
 
 @-webkit-keyframes rotation {
-  /* line 61, ../sass/screen.scss */
+  /* line 62, ../sass/screen.scss */
   from {
     -webkit-transform: rotate(0deg);
   }
 
-  /* line 62, ../sass/screen.scss */
+  /* line 63, ../sass/screen.scss */
   to {
     -webkit-transform: rotate(359deg);
   }
 }
 
-/* line 65, ../sass/screen.scss */
+/* line 66, ../sass/screen.scss */
 .saltcircle img {
-  width: 60%;
-  height: auto;
+  width: 600px;
+  height: 600px;
 }
 
-/* line 70, ../sass/screen.scss */
+/* line 71, ../sass/screen.scss */
 .three05 {
   display: -webkit-box;
   display: -moz-box;
@@ -177,7 +178,7 @@ html, body {
   margin-bottom: 2%;
 }
 
-/* line 79, ../sass/screen.scss */
+/* line 80, ../sass/screen.scss */
 .tomycity {
   display: -webkit-box;
   display: -moz-box;

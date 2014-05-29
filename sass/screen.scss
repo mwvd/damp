@@ -50,6 +50,7 @@ $cry-font: "Andale Mono", AndaleMono, Consolas, monaco monospace;
     width: 100%;
     
     position: fixed;
+    top: 0;
     z-index: 9;
 }
 
@@ -63,8 +64,8 @@ $cry-font: "Andale Mono", AndaleMono, Consolas, monaco monospace;
 }
 
 .saltcircle img {
-    width: 60%;
-    height: auto;
+    width: 600px;
+    height: 600px;
 }
 
 .three05 {
