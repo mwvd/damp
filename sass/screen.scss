@@ -43,6 +43,30 @@ $cry-font: "Andale Mono", AndaleMono, Consolas, monaco monospace;
     color: #FFF;
 }
 
+.saltcircle {
+    @include boxflex;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    
+    position: fixed;
+    z-index: -1;
+}
+
+#future {
+    -webkit-animation: rotation 15s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+    from {-webkit-transform: rotate(0deg);}
+    to   {-webkit-transform: rotate(359deg);}
+}
+
+.saltcircle img {
+    width: 60%;
+    height: auto;
+}
+
 .three05 {
     @include boxflex;
     width: 45%;

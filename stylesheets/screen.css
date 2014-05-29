@@ -103,6 +103,55 @@ html, body {
 }
 
 /* line 46, ../sass/screen.scss */
+.saltcircle {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+}
+
+/* line 56, ../sass/screen.scss */
+#future {
+  -webkit-animation: rotation 15s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+  /* line 61, ../sass/screen.scss */
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+
+  /* line 62, ../sass/screen.scss */
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}
+
+/* line 65, ../sass/screen.scss */
+.saltcircle img {
+  width: 60%;
+  height: auto;
+}
+
+/* line 70, ../sass/screen.scss */
 .three05 {
   display: -webkit-box;
   display: -moz-box;
@@ -128,7 +177,7 @@ html, body {
   margin-bottom: 2%;
 }
 
-/* line 55, ../sass/screen.scss */
+/* line 79, ../sass/screen.scss */
 .tomycity {
   display: -webkit-box;
   display: -moz-box;
