@@ -48,6 +48,7 @@ $cry-font: "Andale Mono", AndaleMono, Consolas, monaco monospace;
     margin: 0;
     height: 100%;
     width: 100%;
+    -webkit-backface-visibility: hidden;
     
     position: fixed;
     top: 0;
@@ -66,6 +67,7 @@ $cry-font: "Andale Mono", AndaleMono, Consolas, monaco monospace;
 .saltcircle svg {
     width: 600px;
     height: 600px;
+    -webkit-backface-visibility: hidden;
 }
 
 .three05 {
