@@ -32,13 +32,30 @@ $cry-font: "Andale Mono", AndaleMono, Consolas, monaco monospace;
     flex-direction: column;
 }
 
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+.phantom {
+    width: 100%;
+    height: 800%;
+    
+    background-color: #1d00ff;
+    background-image: -webkit-gradient(linear, 0 0, 100% 0, from(#1d00ff), to(#f00));
+    background-image: -webkit-linear-gradient(to bottom, #1d00ff, #f00);
+    background-image: -moz-linear-gradient(to bottom, #1d00ff, #f00);
+    background-image: -o-linear-gradient(to bottom, #1d00ff, #f00);
+    background-image: linear-gradient(to bottom, #1d00ff, #f00);
+}
+
 .ghoul {
     @include boxflex;
     margin: 0;
     height: 100%;
     width: 100%;
+    z-index: 3;
+    position: fixed;
     
-    background-color: rgb(29, 0, 255);
     font-family: $cry-font;
     color: #FFF;
 }
