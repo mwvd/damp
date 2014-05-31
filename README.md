@@ -29,11 +29,6 @@ send me a message or send me an email [send me an email](mailto:mwvdavidson@gmai
 
 
 (◕‿◕✿)
+
+
 1994 - 201X
-
-
-
-
-
-Contributors:
-+ [mackenzie davidson](mvckenzie.com "come thru")
