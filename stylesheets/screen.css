@@ -73,14 +73,15 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 html, body {
   background-color: #FFF;
   height: 100%;
+  overflow: hidden;
 }
 
-/* line 35, ../sass/screen.scss */
+/* line 36, ../sass/screen.scss */
 ::-webkit-scrollbar {
   display: none;
 }
 
-/* line 39, ../sass/screen.scss */
+/* line 40, ../sass/screen.scss */
 .phantom {
   width: 100%;
   height: 2000%;
@@ -91,9 +92,10 @@ html, body {
   background-image: -moz-linear-gradient(top, #1d00ff, red);
   background-image: -o-linear-gradient(top, #1d00ff, red);
   background-image: linear-gradient(top, #1d00ff, #ff0000);
+  overflow: auto;
 }
 
-/* line 52, ../sass/screen.scss */
+/* line 54, ../sass/screen.scss */
 .ghoul {
   display: -webkit-box;
   display: -moz-box;
@@ -121,7 +123,7 @@ html, body {
   color: #FFF;
 }
 
-/* line 64, ../sass/screen.scss */
+/* line 66, ../sass/screen.scss */
 .saltcircle {
   display: -webkit-box;
   display: -moz-box;
@@ -149,31 +151,31 @@ html, body {
   z-index: 0;
 }
 
-/* line 76, ../sass/screen.scss */
+/* line 78, ../sass/screen.scss */
 #future {
   -webkit-animation: rotation 15s infinite linear;
 }
 
 @-webkit-keyframes rotation {
-  /* line 81, ../sass/screen.scss */
+  /* line 83, ../sass/screen.scss */
   from {
     -webkit-transform: rotate(0deg);
   }
 
-  /* line 82, ../sass/screen.scss */
+  /* line 84, ../sass/screen.scss */
   to {
     -webkit-transform: rotate(359deg);
   }
 }
 
-/* line 85, ../sass/screen.scss */
+/* line 87, ../sass/screen.scss */
 .saltcircle svg {
   width: 600px;
   height: 600px;
   -webkit-backface-visibility: hidden;
 }
 
-/* line 91, ../sass/screen.scss */
+/* line 93, ../sass/screen.scss */
 .three05 {
   display: -webkit-box;
   display: -moz-box;
@@ -200,7 +202,7 @@ html, body {
   z-index: 11;
 }
 
-/* line 101, ../sass/screen.scss */
+/* line 103, ../sass/screen.scss */
 .tomycity {
   display: -webkit-box;
   display: -moz-box;
