@@ -25,7 +25,7 @@ damp magazine {
 
 
 hmu if you want to contribute: 
-send me a message or send me an email [send me an email](mailto:mwvdavidson@gmail.com "hmu")
+send me a message or [send me an email](mailto:mwvdavidson@gmail.com "hmu")
 
 
 (◕‿◕✿)
