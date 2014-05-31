@@ -121,9 +121,10 @@ html, body {
   z-index: 11;
   font-family: "Andale Mono", AndaleMono, Consolas, monaco monospace;
   color: #FFF;
+  overflow: auto;
 }
 
-/* line 66, ../sass/screen.scss */
+/* line 67, ../sass/screen.scss */
 .saltcircle {
   display: -webkit-box;
   display: -moz-box;
@@ -149,33 +150,34 @@ html, body {
   position: fixed;
   top: 0;
   z-index: 0;
+  overflow: auto;
 }
 
-/* line 78, ../sass/screen.scss */
+/* line 80, ../sass/screen.scss */
 #future {
   -webkit-animation: rotation 15s infinite linear;
 }
 
 @-webkit-keyframes rotation {
-  /* line 83, ../sass/screen.scss */
+  /* line 85, ../sass/screen.scss */
   from {
     -webkit-transform: rotate(0deg);
   }
 
-  /* line 84, ../sass/screen.scss */
+  /* line 86, ../sass/screen.scss */
   to {
     -webkit-transform: rotate(359deg);
   }
 }
 
-/* line 87, ../sass/screen.scss */
+/* line 89, ../sass/screen.scss */
 .saltcircle svg {
   width: 600px;
   height: 600px;
   -webkit-backface-visibility: hidden;
 }
 
-/* line 93, ../sass/screen.scss */
+/* line 95, ../sass/screen.scss */
 .three05 {
   display: -webkit-box;
   display: -moz-box;
@@ -200,9 +202,10 @@ html, body {
   margin-top: 2%;
   margin-bottom: 2%;
   z-index: 11;
+  overflow: auto;
 }
 
-/* line 103, ../sass/screen.scss */
+/* line 106, ../sass/screen.scss */
 .tomycity {
   display: -webkit-box;
   display: -moz-box;
@@ -227,4 +230,5 @@ html, body {
   margin-top: 2%;
   margin-bottom: 2%;
   z-index: 11;
+  overflow: auto;
 }
