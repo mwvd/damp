@@ -39,7 +39,7 @@ $cry-font: "Andale Mono", AndaleMono, Consolas, monaco monospace;
 .phantom {
     width: 100%;
     height: 2000%;
-    z-index: 2;
+    z-index: -10;
     
     background-color: #1d00ff;
     background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#1d00ff), to(#f00));
@@ -55,7 +55,7 @@ $cry-font: "Andale Mono", AndaleMono, Consolas, monaco monospace;
     height: 100%;
     width: 100%;
     position: fixed;
-    z-index: 1;
+    z-index: 11;
     
     font-family: $cry-font;
     color: #FFF;

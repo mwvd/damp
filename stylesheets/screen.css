@@ -84,7 +84,7 @@ html, body {
 .phantom {
   width: 100%;
   height: 2000%;
-  z-index: 2;
+  z-index: -10;
   background-color: #1d00ff;
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#1d00ff), to(red));
   background-image: -webkit-linear-gradient(top, #1d00ff, red);
@@ -116,7 +116,7 @@ html, body {
   height: 100%;
   width: 100%;
   position: fixed;
-  z-index: 1;
+  z-index: 11;
   font-family: "Andale Mono", AndaleMono, Consolas, monaco monospace;
   color: #FFF;
 }
