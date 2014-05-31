@@ -39,6 +39,7 @@ $cry-font: "Andale Mono", AndaleMono, Consolas, monaco monospace;
 .phantom {
     width: 100%;
     height: 2000%;
+    z-index: 2;
     
     background-color: #1d00ff;
     background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#1d00ff), to(#f00));
@@ -54,6 +55,7 @@ $cry-font: "Andale Mono", AndaleMono, Consolas, monaco monospace;
     height: 100%;
     width: 100%;
     position: fixed;
+    z-index: 1;
     
     font-family: $cry-font;
     color: #FFF;
@@ -68,7 +70,7 @@ $cry-font: "Andale Mono", AndaleMono, Consolas, monaco monospace;
     
     position: fixed;
     top: 0;
-    z-index: 9;
+    z-index: 0;
 }
 
 #future {
@@ -88,7 +90,6 @@ $cry-font: "Andale Mono", AndaleMono, Consolas, monaco monospace;
 
 .three05 {
     @include boxflex;
-    position: fixed;
     width: 45%;
     height: 3em;
     border: 2px solid #FFF;
@@ -99,7 +100,6 @@ $cry-font: "Andale Mono", AndaleMono, Consolas, monaco monospace;
 
 .tomycity {
     @include boxflex;
-    position: fixed;
     width: 45%;
     height: 3em;
     border: 2px solid #FFF;

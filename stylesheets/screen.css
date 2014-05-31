@@ -84,6 +84,7 @@ html, body {
 .phantom {
   width: 100%;
   height: 2000%;
+  z-index: 2;
   background-color: #1d00ff;
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#1d00ff), to(red));
   background-image: -webkit-linear-gradient(top, #1d00ff, red);
@@ -92,7 +93,7 @@ html, body {
   background-image: linear-gradient(top, #1d00ff, #ff0000);
 }
 
-/* line 51, ../sass/screen.scss */
+/* line 52, ../sass/screen.scss */
 .ghoul {
   display: -webkit-box;
   display: -moz-box;
@@ -115,11 +116,12 @@ html, body {
   height: 100%;
   width: 100%;
   position: fixed;
+  z-index: 1;
   font-family: "Andale Mono", AndaleMono, Consolas, monaco monospace;
   color: #FFF;
 }
 
-/* line 62, ../sass/screen.scss */
+/* line 64, ../sass/screen.scss */
 .saltcircle {
   display: -webkit-box;
   display: -moz-box;
@@ -144,34 +146,34 @@ html, body {
   -webkit-backface-visibility: hidden;
   position: fixed;
   top: 0;
-  z-index: 9;
+  z-index: 0;
 }
 
-/* line 74, ../sass/screen.scss */
+/* line 76, ../sass/screen.scss */
 #future {
   -webkit-animation: rotation 15s infinite linear;
 }
 
 @-webkit-keyframes rotation {
-  /* line 79, ../sass/screen.scss */
+  /* line 81, ../sass/screen.scss */
   from {
     -webkit-transform: rotate(0deg);
   }
 
-  /* line 80, ../sass/screen.scss */
+  /* line 82, ../sass/screen.scss */
   to {
     -webkit-transform: rotate(359deg);
   }
 }
 
-/* line 83, ../sass/screen.scss */
+/* line 85, ../sass/screen.scss */
 .saltcircle svg {
   width: 600px;
   height: 600px;
   -webkit-backface-visibility: hidden;
 }
 
-/* line 89, ../sass/screen.scss */
+/* line 91, ../sass/screen.scss */
 .three05 {
   display: -webkit-box;
   display: -moz-box;
@@ -190,7 +192,6 @@ html, body {
   justify-content: center;
   -webkit-flex-direction: column;
   flex-direction: column;
-  position: fixed;
   width: 45%;
   height: 3em;
   border: 2px solid #FFF;
@@ -199,7 +200,7 @@ html, body {
   z-index: 11;
 }
 
-/* line 100, ../sass/screen.scss */
+/* line 101, ../sass/screen.scss */
 .tomycity {
   display: -webkit-box;
   display: -moz-box;
@@ -218,7 +219,6 @@ html, body {
   justify-content: center;
   -webkit-flex-direction: column;
   flex-direction: column;
-  position: fixed;
   width: 45%;
   height: 3em;
   border: 2px solid #FFF;
