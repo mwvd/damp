@@ -196,9 +196,10 @@ html, body {
   border: 2px solid #FFF;
   margin-top: 2%;
   margin-bottom: 2%;
+  z-index: 9;
 }
 
-/* line 99, ../sass/screen.scss */
+/* line 100, ../sass/screen.scss */
 .tomycity {
   display: -webkit-box;
   display: -moz-box;
@@ -222,4 +223,5 @@ html, body {
   border: 2px solid #FFF;
   margin-top: 2%;
   margin-bottom: 2%;
+  z-index: 9;
 }
