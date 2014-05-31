@@ -38,14 +38,14 @@ $cry-font: "Andale Mono", AndaleMono, Consolas, monaco monospace;
 
 .phantom {
     width: 100%;
-    height: 800%;
+    height: 2000%;
     
     background-color: #1d00ff;
-    background-image: -webkit-gradient(linear, 0 0, 100% 0, from(#1d00ff), to(#f00));
-    background-image: -webkit-linear-gradient(to bottom, #1d00ff, #f00);
-    background-image: -moz-linear-gradient(to bottom, #1d00ff, #f00);
-    background-image: -o-linear-gradient(to bottom, #1d00ff, #f00);
-    background-image: linear-gradient(to bottom, #1d00ff, #f00);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#1d00ff), to(#f00));
+    background-image: -webkit-linear-gradient(top, #1d00ff, #f00);
+    background-image: -moz-linear-gradient(top, #1d00ff, #f00);
+    background-image: -o-linear-gradient(top, #1d00ff, #f00);
+    background-image: linear-gradient(top, #1d00ff, #f00);
 }
 
 .ghoul {
@@ -53,7 +53,6 @@ $cry-font: "Andale Mono", AndaleMono, Consolas, monaco monospace;
     margin: 0;
     height: 100%;
     width: 100%;
-    z-index: 3;
     position: fixed;
     
     font-family: $cry-font;
@@ -89,20 +88,22 @@ $cry-font: "Andale Mono", AndaleMono, Consolas, monaco monospace;
 
 .three05 {
     @include boxflex;
+    position: fixed;
     width: 45%;
     height: 3em;
     border: 2px solid #FFF;
     margin-top: 2%;
     margin-bottom: 2%;
-    z-index: 10;
+    z-index: 11;
 }
 
 .tomycity {
     @include boxflex;
+    position: fixed;
     width: 45%;
     height: 3em;
     border: 2px solid #FFF;
     margin-top: 2%;
     margin-bottom: 2%;
-    z-index: 10;
+    z-index: 11;
 }

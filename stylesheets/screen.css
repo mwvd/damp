@@ -83,13 +83,13 @@ html, body {
 /* line 39, ../sass/screen.scss */
 .phantom {
   width: 100%;
-  height: 800%;
+  height: 2000%;
   background-color: #1d00ff;
-  background-image: -webkit-gradient(linear, 0 0, 100% 0, from(#1d00ff), to(red));
-  background-image: -webkit-linear-gradient(to bottom, #1d00ff, red);
-  background-image: -moz-linear-gradient(to bottom, #1d00ff, red);
-  background-image: -o-linear-gradient(to bottom, #1d00ff, red);
-  background-image: linear-gradient(to bottom, #1d00ff, #ff0000);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#1d00ff), to(red));
+  background-image: -webkit-linear-gradient(top, #1d00ff, red);
+  background-image: -moz-linear-gradient(top, #1d00ff, red);
+  background-image: -o-linear-gradient(top, #1d00ff, red);
+  background-image: linear-gradient(top, #1d00ff, #ff0000);
 }
 
 /* line 51, ../sass/screen.scss */
@@ -114,13 +114,12 @@ html, body {
   margin: 0;
   height: 100%;
   width: 100%;
-  z-index: 3;
   position: fixed;
   font-family: "Andale Mono", AndaleMono, Consolas, monaco monospace;
   color: #FFF;
 }
 
-/* line 63, ../sass/screen.scss */
+/* line 62, ../sass/screen.scss */
 .saltcircle {
   display: -webkit-box;
   display: -moz-box;
@@ -148,31 +147,31 @@ html, body {
   z-index: 9;
 }
 
-/* line 75, ../sass/screen.scss */
+/* line 74, ../sass/screen.scss */
 #future {
   -webkit-animation: rotation 15s infinite linear;
 }
 
 @-webkit-keyframes rotation {
-  /* line 80, ../sass/screen.scss */
+  /* line 79, ../sass/screen.scss */
   from {
     -webkit-transform: rotate(0deg);
   }
 
-  /* line 81, ../sass/screen.scss */
+  /* line 80, ../sass/screen.scss */
   to {
     -webkit-transform: rotate(359deg);
   }
 }
 
-/* line 84, ../sass/screen.scss */
+/* line 83, ../sass/screen.scss */
 .saltcircle svg {
   width: 600px;
   height: 600px;
   -webkit-backface-visibility: hidden;
 }
 
-/* line 90, ../sass/screen.scss */
+/* line 89, ../sass/screen.scss */
 .three05 {
   display: -webkit-box;
   display: -moz-box;
@@ -191,12 +190,13 @@ html, body {
   justify-content: center;
   -webkit-flex-direction: column;
   flex-direction: column;
+  position: fixed;
   width: 45%;
   height: 3em;
   border: 2px solid #FFF;
   margin-top: 2%;
   margin-bottom: 2%;
-  z-index: 10;
+  z-index: 11;
 }
 
 /* line 100, ../sass/screen.scss */
@@ -218,10 +218,11 @@ html, body {
   justify-content: center;
   -webkit-flex-direction: column;
   flex-direction: column;
+  position: fixed;
   width: 45%;
   height: 3em;
   border: 2px solid #FFF;
   margin-top: 2%;
   margin-bottom: 2%;
-  z-index: 10;
+  z-index: 11;
 }
