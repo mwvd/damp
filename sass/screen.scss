@@ -7,7 +7,7 @@ html, body {
     height: 100%;
 }
 
-$cry-font: "Andale Mono", AndaleMono, Consolas, monaco monospace;
+$cry-font: "Andale Mono", AndaleMono, "Inconsolata", Consolas, monaco monospace;
 
 @mixin boxflex {
     display: -webkit-box;
@@ -33,7 +33,7 @@ $cry-font: "Andale Mono", AndaleMono, Consolas, monaco monospace;
 }
 
 ::-webkit-scrollbar { 
-    display: none; 
+    display: none;
 }
 
 .phantom {

@@ -1,4 +1,3 @@
-/* line 17, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -20,67 +19,55 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
 
-/* line 3, ../sass/screen.scss */
 * {
   margin: 0;
   padding: 0;
 }
 
-/* line 5, ../sass/screen.scss */
 html, body {
   background-color: #FFF;
   height: 100%;
 }
 
-/* line 35, ../sass/screen.scss */
 ::-webkit-scrollbar {
   display: none;
 }
 
-/* line 39, ../sass/screen.scss */
 .phantom {
   width: 100%;
   height: 2000%;
@@ -93,7 +80,6 @@ html, body {
   background-image: linear-gradient(top, #1d00ff, #ff0000);
 }
 
-/* line 52, ../sass/screen.scss */
 .ghoul {
   display: -webkit-box;
   display: -moz-box;
@@ -117,11 +103,10 @@ html, body {
   width: 100%;
   position: fixed;
   z-index: 11;
-  font-family: "Andale Mono", AndaleMono, Consolas, monaco monospace;
+  font-family: "Andale Mono", AndaleMono, "Inconsolata", Consolas, monaco monospace;
   color: #FFF;
 }
 
-/* line 64, ../sass/screen.scss */
 .saltcircle {
   display: -webkit-box;
   display: -moz-box;
@@ -149,31 +134,26 @@ html, body {
   z-index: 0;
 }
 
-/* line 76, ../sass/screen.scss */
 #future {
   -webkit-animation: rotation 15s infinite linear;
 }
 
 @-webkit-keyframes rotation {
-  /* line 81, ../sass/screen.scss */
   from {
     -webkit-transform: rotate(0deg);
   }
 
-  /* line 82, ../sass/screen.scss */
   to {
     -webkit-transform: rotate(359deg);
   }
 }
 
-/* line 85, ../sass/screen.scss */
 .saltcircle svg {
   width: 600px;
   height: 600px;
   -webkit-backface-visibility: hidden;
 }
 
-/* line 91, ../sass/screen.scss */
 .three05 {
   display: -webkit-box;
   display: -moz-box;
@@ -200,7 +180,6 @@ html, body {
   z-index: 11;
 }
 
-/* line 101, ../sass/screen.scss */
 .tomycity {
   display: -webkit-box;
   display: -moz-box;
