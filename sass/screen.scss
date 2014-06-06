@@ -41,12 +41,12 @@ $cry-font: "Andale Mono", AndaleMono, "Inconsolata", Consolas, monaco, monospace
     height: 2000%;
     z-index: -10;
     
-    background-color: #1d00ff;
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#1d00ff), to(#f00));
-    background-image: -webkit-linear-gradient(top, #1d00ff, #f00);
-    background-image: -moz-linear-gradient(top, #1d00ff, #f00);
-    background-image: -o-linear-gradient(top, #1d00ff, #f00);
-    background-image: linear-gradient(top, #1d00ff, #f00);
+    background-color: #0000ff;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0000ff), to(#ff0000));
+    background-image: -webkit-linear-gradient(top, #0000ff, #ff0000);
+    background-image: -moz-linear-gradient(top, #0000ff, #ff0000);
+    background-image: -o-linear-gradient(top, #0000ff, #ff0000);
+    background-image: linear-gradient(top, #0000ff, #ff0000);
 }
 
 .ghoul {

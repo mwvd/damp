@@ -72,12 +72,12 @@ html, body {
   width: 100%;
   height: 2000%;
   z-index: -10;
-  background-color: #1d00ff;
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#1d00ff), to(red));
-  background-image: -webkit-linear-gradient(top, #1d00ff, red);
-  background-image: -moz-linear-gradient(top, #1d00ff, red);
-  background-image: -o-linear-gradient(top, #1d00ff, red);
-  background-image: linear-gradient(top, #1d00ff, #ff0000);
+  background-color: #0000ff;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(blue), to(red));
+  background-image: -webkit-linear-gradient(top, blue, red);
+  background-image: -moz-linear-gradient(top, blue, red);
+  background-image: -o-linear-gradient(top, blue, red);
+  background-image: linear-gradient(top, #0000ff, #ff0000);
 }
 
 .ghoul {
