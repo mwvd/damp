@@ -103,7 +103,7 @@ html, body {
   width: 100%;
   position: fixed;
   z-index: 11;
-  font-family: "Andale Mono", AndaleMono, "Inconsolata", Consolas, monaco monospace;
+  font-family: "Andale Mono", AndaleMono, "Inconsolata", Consolas, monaco, monospace;
   color: #FFF;
 }
 
