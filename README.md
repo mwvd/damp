@@ -18,7 +18,7 @@ i want to integrate every experience - one page of composition & movement & idea
 
 damp magazine {
     issue #1: oil money;
-    coming: june 18th;
+    coming: july 11th;
     }
 
 ```
