@@ -4,7 +4,7 @@ Damp
 ![alt text](https://raw.githubusercontent.com/mwvd/damp/gh-pages/assets/1.png "screen")
 
 
-a publishing experiment for a post-paper society
+a publishing experiment for a post-paper society :leaves: :ocean:
 
 
 print is falling off but it's still half exciting. this will be something leaner and more deliberate. I'm calling it '**damp**'
