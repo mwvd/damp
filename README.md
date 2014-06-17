@@ -7,11 +7,11 @@ Damp
 a publishing experiment for a post-paper society
 
 
-print is falling off but it's still half exciting. this will be something leaner and more deliberate. i'm calling it '**damp**'
+print is falling off but it's still half exciting. this will be something leaner and more deliberate. I'm calling it '**damp**'
 
-i'm looking for artists, writers, and devs to contribute
+I'm looking for artists, writers, and devs to contribute
 
-i want to integrate every experience - one page of composition & movement & ideas & maybe even secrets
+I want to integrate every experience - one page of composition & movement & ideas & maybe even secrets
 
 
 ```
