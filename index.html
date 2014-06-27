@@ -46,6 +46,9 @@ contribute: https://github.com/mwvd/damp
         <title>issue #1: oil money</title>
         <meta name="description" content="ISSUE #1 // OIL MONEY">
         
+        <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        
         <meta property="og:title" content="damp // issue #1: oil money" />
         <meta property="og:type" content="article" />
         <meta property="og:image" content="https://raw.githubusercontent.com/mwvd/damp/gh-pages/assets/1.png" />
@@ -63,7 +66,7 @@ contribute: https://github.com/mwvd/damp
                 ~ ISSUE #1 : OIL MONEY // 1994 - 201X ~
             </div>
             <div class="tomycity">
-                coming july 11th
+                chapter 1 :: chapter 2
             </div>
         </div>
         <div class="saltcircle">
@@ -126,7 +129,200 @@ contribute: https://github.com/mwvd/damp
                 </g>
             </svg>
         </div>
-        <div class="phantom"></div>
+        
+		<div id="container"><br/><br/><br/>just a moment...</div>
+		<div id="info"></div>
+
+        <script src="young/money/threejs/build/three.min.js"></script>
+		<script src="js/FirstPersonControls.js"></script>
+		<script src="js/ImprovedNoise.js"></script>
+		<script src="js/detector.js"></script>
+		<script src="js/stats.min.js"></script>
+
+		<script>
+
+			if ( ! Detector.webgl ) {
+
+				Detector.addGetWebGLMessage();
+				document.getElementById( 'container' ).innerHTML = "";
+
+			}
+
+			var camera, controls, scene, renderer;
+
+			var mesh, texture;
+
+			var worldWidth = 256, worldDepth = 256,
+			worldHalfWidth = worldWidth / 2, worldHalfDepth = worldDepth / 2;
+
+			var clock = new THREE.Clock();
+
+			init();
+			animate();
+
+			function init() {
+
+				container = document.getElementById( 'container' );
+
+				camera = new THREE.PerspectiveCamera( 60, window.innerWidth / window.innerHeight, 1, 20000 );
+
+				scene = new THREE.Scene();
+
+				controls = new THREE.FirstPersonControls( camera );
+				controls.movementSpeed = 500;
+				controls.lookSpeed = 0.05;
+
+				data = generateHeight( worldWidth, worldDepth );
+
+				camera.position.y = data[ worldHalfWidth + worldHalfDepth * worldWidth ] * 5 + 100;
+
+				var geometry = new THREE.PlaneGeometry( 9000, 9000, worldWidth - 1, worldDepth - 1 );
+				geometry.applyMatrix( new THREE.Matrix4().makeRotationX( - Math.PI / 2 ) );
+
+				for ( var i = 0, l = geometry.vertices.length; i < l; i ++ ) {
+
+					geometry.vertices[ i ].y = data[ i ] * 7;
+
+				}
+
+				texture = new THREE.Texture( generateTexture( data, worldWidth, worldDepth ), new THREE.UVMapping(), THREE.ClampToEdgeWrapping, THREE.ClampToEdgeWrapping );
+				texture.needsUpdate = true;
+
+				mesh = new THREE.Mesh( geometry, new THREE.MeshBasicMaterial( { map: texture } ) );
+				scene.add( mesh );
+
+				renderer = new THREE.WebGLRenderer();
+				renderer.setClearColor( 0x0000ff );
+				renderer.setSize( window.innerWidth, window.innerHeight );
+
+				container.innerHTML = "";
+
+				container.appendChild( renderer.domElement );
+
+
+				//
+
+				window.addEventListener( 'resize', onWindowResize, false );
+
+			}
+
+			function onWindowResize() {
+
+				camera.aspect = window.innerWidth / window.innerHeight;
+				camera.updateProjectionMatrix();
+
+				renderer.setSize( window.innerWidth, window.innerHeight );
+
+				controls.handleResize();
+
+			}
+
+			function generateHeight( width, height ) {
+
+				var size = width * height, data = new Uint8Array( size ),
+				perlin = new ImprovedNoise(), quality = 1, z = Math.random() * 100;
+
+				for ( var j = 0; j < 4; j ++ ) {
+
+					for ( var i = 0; i < size; i ++ ) {
+
+						var x = i % width, y = ~~ ( i / width );
+						data[ i ] += Math.abs( perlin.noise( x / quality, y / quality, z ) * quality * 1.75 );
+
+					}
+
+					quality *= 5;
+
+				}
+
+				return data;
+
+			}
+
+			function generateTexture( data, width, height ) {
+
+				var canvas, canvasScaled, context, image, imageData,
+				level, diff, vector3, sun, shade;
+
+				vector3 = new THREE.Vector3( 0, 0, 0 );
+
+				sun = new THREE.Vector3( 1, 1, 1 );
+				sun.normalize();
+
+				canvas = document.createElement( 'canvas' );
+				canvas.width = width;
+				canvas.height = height;
+
+				context = canvas.getContext( '2d' );
+				context.fillStyle = '#000';
+				context.fillRect( 0, 0, width, height );
+
+				image = context.getImageData( 0, 0, canvas.width, canvas.height );
+				imageData = image.data;
+
+				for ( var i = 0, j = 0, l = imageData.length; i < l; i += 4, j ++ ) {
+
+					vector3.x = data[ j - 4 ] - data[ j + 4 ];
+					vector3.y = 2;
+					vector3.z = data[ j - width * 2 ] - data[ j + width * 2 ];
+					vector3.normalize();
+
+					shade = vector3.dot( sun );
+
+					imageData[ i ] = ( shade * 168 ) * ( 0.5 + data[ j ] * 0.007 );
+					imageData[ i + 1 ] = ( shade * 156 ) * ( 0.5 + data[ j ] * 0.007 );
+					imageData[ i + 2 ] = ( shade * 196 ) * ( 0.5 + data[ j ] * 0.007 );
+				}
+
+				context.putImageData( image, 0, 0 );
+
+				// Scaled 4x
+
+				canvasScaled = document.createElement( 'canvas' );
+				canvasScaled.width = width * 4;
+				canvasScaled.height = height * 4;
+
+				context = canvasScaled.getContext( '2d' );
+				context.scale( 4, 4 );
+				context.drawImage( canvas, 0, 0 );
+
+				image = context.getImageData( 0, 0, canvasScaled.width, canvasScaled.height );
+				imageData = image.data;
+
+				for ( var i = 0, l = imageData.length; i < l; i += 4 ) {
+
+					var v = ~~ ( Math.random() * 5 );
+
+					imageData[ i ] += v;
+					imageData[ i + 1 ] += v;
+					imageData[ i + 2 ] += v;
+
+				}
+
+				context.putImageData( image, 0, 0 );
+
+				return canvasScaled;
+
+			}
+
+			//
+
+			function animate() {
+
+				requestAnimationFrame( animate );
+
+				render();
+
+			}
+
+			function render() {
+
+				controls.update( clock.getDelta() );
+				renderer.render( scene, camera );
+
+			}
+
+		</script>
     </body>
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
