@@ -4,21 +4,19 @@ Damp
 ![alt text](https://raw.githubusercontent.com/mwvd/damp/gh-pages/assets/1.png "screen")
 
 
-a publishing experiment for a post-paper society :ocean: :leaves:
+a publishing experiment for a post-paper society :ocean: :leaves: this is something lean and deliberate. It's called '**damp**'
 
+this is an exploration of what it is like to be young in the 21st century.
+this is an exploration of what it is like to have been born at the end of a millenium.
 
-print is falling off but it's still half exciting. this will be something leaner and more deliberate. I'm calling it '**damp**'
-
-I'm looking for artists, writers, and devs to contribute
-
-I want to integrate every experience - one page of composition & movement & ideas & maybe even secrets
+presented in 2 chapters
 
 
 ```
 
 damp magazine {
     issue #1: oil money;
-    coming: july 11th;
+    coming: when it's done and ready;
     }
 
 ```
