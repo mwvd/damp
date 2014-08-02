@@ -33,6 +33,19 @@ $cry-font: "Andale Mono", AndaleMono, "Inconsolata", Consolas, monaco, monospace
     flex-direction: column;
 }
 
+@mixin centerflexh {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center; 
+    -moz-box-pack: center; 
+    -ms-flex-pack: center; 
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
 ::-webkit-scrollbar { 
     display: none;
 }
@@ -93,22 +106,21 @@ $cry-font: "Andale Mono", AndaleMono, "Inconsolata", Consolas, monaco, monospace
     @include boxflex;
     width: 45%;
     height: 3em;
-    border: 2px solid #FFF;
-    margin-top: 2%;
+    /*border: 2px solid #FFF;*/
+    margin-top: 0%;
     margin-bottom: 2%;
     z-index: 11;
 }
 
-.bgtest {
-    height: 800%;
+.toowet {
+    @include centerflexh;
+    width: 45%;
+}
+
+.reach {
     width: 100%;
-    background: #1e5799;
-    background: -moz-linear-gradient(top, #1e5799 0%, #2989d8 50%, #207cca 51%, #447f46 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e5799), color-stop(50%,#2989d8), color-stop(51%,#207cca), color-stop(100%,#447f46));
-    background: -webkit-linear-gradient(top, #1e5799 0%,#2989d8 50%,#207cca 51%,#447f46 100%);
-    background: -o-linear-gradient(top, #1e5799 0%,#2989d8 50%,#207cca 51%,#447f46 100%);
-    background: -ms-linear-gradient(top, #1e5799 0%,#2989d8 50%,#207cca 51%,#447f46 100%);
-    background: linear-gradient(to bottom, #1e5799 0%,#2989d8 50%,#207cca 51%,#447f46 100%);
+    height: auto;
+    fill: #FFF;
 }
 
 .tomycity {
@@ -116,7 +128,35 @@ $cry-font: "Andale Mono", AndaleMono, "Inconsolata", Consolas, monaco, monospace
     width: 45%;
     height: 3em;
     border: 2px solid #FFF;
-    margin-top: 2%;
+    margin-top: 0%;
     margin-bottom: 2%;
     z-index: 11;
+    clear: none;
+    white-space: nowrap;
+}
+
+a {
+    display: inline;
+}
+
+.tomycity > .gottawrapthis > a {
+    display: inline-block;
+}
+
+.tomycity > .gottawrapthis > a:link {
+    text-decoration: none;
+    color: #FFF;
+}
+
+.tomycity > .gottawrapthis > a:visited {
+    text-decoration: none;
+    color: #FFF;
+}
+.tomycity > .gottawrapthis > a:hover {
+    text-decoration: none;
+    color: #FFF;
+}
+.tomycity > .gottawrapthis > a:active {
+    text-decoration: none;
+    color: #FFF;
 }
