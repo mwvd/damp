@@ -75,6 +75,10 @@ $cry-font: "Andale Mono", AndaleMono, "Inconsolata", Consolas, monaco, monospace
     color: #FFF;
 }
 
+#ghoul {
+    cursor: pointer;
+}
+
 .saltcircle {
     @include boxflex;
     margin: 0;
@@ -167,6 +171,9 @@ a {
 .tomycity > .gottawrapthis > a:hover {
     text-decoration: none;
     color: #FFF;
+    padding-top: 3px;
+    padding-bottom: 2px;
+    border-bottom: #FFF solid 1px;
 }
 .tomycity > .gottawrapthis > a:active {
     text-decoration: none;
