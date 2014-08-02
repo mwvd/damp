@@ -5,6 +5,7 @@
 html, body {
     background-color: #FFF;
     height: 100%;
+    width: 100%; 
 }
 
 $cry-font: "Andale Mono", AndaleMono, "Inconsolata", Consolas, monaco, monospace;
@@ -30,6 +31,19 @@ $cry-font: "Andale Mono", AndaleMono, "Inconsolata", Consolas, monaco, monospace
     
     -webkit-flex-direction: column;
     flex-direction: column;
+}
+
+@mixin centerflexh {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center; 
+    -moz-box-pack: center; 
+    -ms-flex-pack: center; 
+    -webkit-justify-content: center;
+    justify-content: center;
 }
 
 ::-webkit-scrollbar { 
@@ -92,10 +106,21 @@ $cry-font: "Andale Mono", AndaleMono, "Inconsolata", Consolas, monaco, monospace
     @include boxflex;
     width: 45%;
     height: 3em;
-    border: 2px solid #FFF;
-    margin-top: 2%;
+    /*border: 2px solid #FFF;*/
+    margin-top: 0%;
     margin-bottom: 2%;
     z-index: 11;
+}
+
+.toowet {
+    @include centerflexh;
+    width: 45%;
+}
+
+.reach {
+    width: 100%;
+    height: auto;
+    fill: #FFF;
 }
 
 .tomycity {
@@ -103,7 +128,47 @@ $cry-font: "Andale Mono", AndaleMono, "Inconsolata", Consolas, monaco, monospace
     width: 45%;
     height: 3em;
     border: 2px solid #FFF;
-    margin-top: 2%;
+    margin-top: 0%;
     margin-bottom: 2%;
     z-index: 11;
+    clear: none;
+    white-space: nowrap;
+}
+
+.somethingwas svg {
+    fill: #FFF;
+}
+
+.somethingis svg {
+    fill: #FFF;
+}
+
+.somethingnow svg {
+    fill: #FFF;
+}
+
+a {
+    display: inline;
+}
+
+.tomycity > .gottawrapthis > a {
+    display: inline-block;
+}
+
+.tomycity > .gottawrapthis > a:link {
+    text-decoration: none;
+    color: #FFF;
+}
+
+.tomycity > .gottawrapthis > a:visited {
+    text-decoration: none;
+    color: #FFF;
+}
+.tomycity > .gottawrapthis > a:hover {
+    text-decoration: none;
+    color: #FFF;
+}
+.tomycity > .gottawrapthis > a:active {
+    text-decoration: none;
+    color: #FFF;
 }
