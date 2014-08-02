@@ -26,8 +26,8 @@ $fstack: "Andale Mono", AndaleMono, "Inconsolata", Consolas, monaco, monospace;
 }
 
 .grad-white{
-	height: 100%;
-	width:100%;
+	height: 300%;
+	width: 100%;
 	background: -webkit-linear-gradient(#0000FF, white); /* For Safari 5.1 to 6.0 */
 	 background: -o-linear-gradient(#0000FF, white); /* For Opera 11.1 to 12.0 */
 	 background: -moz-linear-gradient(#0000FF, white); /* For Firefox 3.6 to 15 */
@@ -63,31 +63,31 @@ $fstack: "Andale Mono", AndaleMono, "Inconsolata", Consolas, monaco, monospace;
 }
 
 .title1{
-	padding: 20px;
+    position: absolute;
+    top: 10;
+    left: 20;
 }
 
 .title2{
-	@include rotate(90deg, 140px, -120px);
+	@include rotate(90deg, 0px, 0px);
 	float:right;
 	position: absolute;
-	right:0px;
-	padding: 20px;
+    top: 60px;
+	right: -30px;
 }
 
 .title3{
 	@include rotate(180deg, 0px, 0px);
 	position: absolute;
-	right: 0px;
+	right: 20px;
 	bottom: 0px;
-	padding: 20px;
 }
 
 .title4{
-	@include rotate(270deg, 140px, -120px);
+	@include rotate(270deg, 0px, 0px);
 	position: absolute;
-	bottom: 0px;
-	left: 0px;
-	padding: 20px;
+	bottom: 105px;
+	left: -80px;
 }
 
 
@@ -105,6 +105,7 @@ $fstack: "Andale Mono", AndaleMono, "Inconsolata", Consolas, monaco, monospace;
 
 .preface{
 	@include blue-page;
+    padding-bottom: 25%;
 }
 
 .the-sea{
@@ -132,3 +133,22 @@ $fstack: "Andale Mono", AndaleMono, "Inconsolata", Consolas, monaco, monospace;
 	}
 }
 
+.link > a:link {
+    text-decoration: none;
+    color: #0000FF;
+}
+
+.link > a:visited {
+    text-decoration: none;
+    color: #0000FF;
+}
+
+.link > a:hover {
+    text-decoration: none;
+    color: #0000FF;
+}
+
+.link > a:active {
+    text-decoration: none;
+    color: #0000FF;
+}
