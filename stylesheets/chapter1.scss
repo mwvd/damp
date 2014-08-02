@@ -6,11 +6,91 @@ $fstack: "Andale Mono", AndaleMono, "Inconsolata", Consolas, monaco, monospace;
 	background: #0000FF;
 }
 
+@mixin rotate($deg, $tr, $ty){
+	transform:rotate($deg) translateX($tr) translateY($ty);
+	-ms-transform:rotate($deg) translateX($tr) translateY($ty); /* IE 9 */
+	-webkit-transform:rotate($deg) translateX($tr) translateY($ty); /* Opera, Chrome, and Safari */
+}
+
+
 .blue-screen{
 	height: 100%;
 	width: 100%;
 	background: #0000FF;
 }
+
+.black-screen{
+	background-color: #fff;
+	-webkit-transition: background-color 500ms ease 500ms; /* For Safari 3.1 to 6.0 */
+	transition: background-color 500ms ease 500ms;
+}
+
+.grad-white{
+	height: 100%;
+	width:100%;
+	background: -webkit-linear-gradient(#0000FF, white); /* For Safari 5.1 to 6.0 */
+	 background: -o-linear-gradient(#0000FF, white); /* For Opera 11.1 to 12.0 */
+	 background: -moz-linear-gradient(#0000FF, white); /* For Firefox 3.6 to 15 */
+	 background: linear-gradient(#0000FF, white); /* Standard syntax */
+}
+
+.white{
+	min-height: 100%;
+	width: 100%;
+	background: transparent;
+}
+
+.box{
+	height: 100%;
+	width: 100%;
+}
+
+.box-overlay{
+	height: 100%;
+	//overflow: auto;
+	width: 100%;
+	background: transparent;
+	position: absolute;
+	z-index: 9;
+	
+	h2{
+		font: 48px 'Montserrat', sans-serif;
+		color: #0000FF;
+		display: inline-block;
+		-webkit-margin-before: 0em;
+		-webkit-margin-after: 0em;
+	}
+}
+
+.title1{
+	padding: 20px;
+}
+
+.title2{
+	@include rotate(90deg, 140px, -120px);
+	float:right;
+	position: absolute;
+	right:0px;
+	padding: 20px;
+}
+
+.title3{
+	@include rotate(180deg, 0px, 0px);
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	padding: 20px;
+}
+
+.title4{
+	@include rotate(270deg, 140px, -120px);
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	padding: 20px;
+}
+
+
 
 #arrow-down{
 	width: 100%;
@@ -32,7 +112,7 @@ $fstack: "Andale Mono", AndaleMono, "Inconsolata", Consolas, monaco, monospace;
 }
 
 #sea-text{
-	display: none;
+	opacity: 0;
 }
 
 .text-wrapper{

@@ -19,15 +19,24 @@
 
         <link rel="stylesheet" href="stylesheets/chapter1.css" type="text/css">
 
+        <link href='http://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+
         <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Inconsolata">
 
         <link href="stylesheets/transition.css" rel="stylesheet" type="text/css"/>
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.13.1/TweenMax.min.js"></script>
+
+        <script type="text/javascript" src="js/jquery.scrollmagic.min.js"></script>
 
         <script type="text/javascript" src="js/fasw.transitions.min.js"></script>
 
         <script src="js/waypoints.min.js"></script>
+
+        <script src="js/three.min.js"></script>
+        <script src="js/FirstPersonControls.js"></script>
+        <script src="js/TrackballControls.js"></script>
 
     <body>
         <div class="blue-screen">
@@ -95,6 +104,31 @@
             </div>
         </div>
 
+        <div class="grad-white">
+        </div>
+
+        <div class="white">
+            
+        </div>
+
+        <div class="box" id="cube">
+            <diV class="box-overlay">
+                <h2 class="title1">
+                    Lorem Ipsum
+                </h2>
+                <h2 class="title2">
+                    Lorem Ipsum
+                </h2>
+                <h2 class="title3">
+                    Lorem Ipsum
+                </h2>
+                <h2 class="title4">
+                    Lorem Ipsum
+                </h2>
+            </div>
+            
+        </div>
+
 
     </body>
 
@@ -104,23 +138,55 @@
     <script>
 
         $(function(){
-            $("#end-preface").waypoint(function(direction){
-                if (direction == 'down'){
-                    $("#sea-text").fadeIn(700, function() {
-                        // Animation complete
-                        console.log("fade?");
-                    });
-                }
-            });
+            // $("#end-preface").waypoint(function(direction){
+            //     if (direction == 'down'){
+            //         $("#sea-text").fadeIn(700, function() {
+            //             // Animation complete
+            //             console.log("fade?");
+            //         });
+            //     }
+            // });
 
-            $("#sea-anchor").waypoint(function(direction){
-                if (direction == 'up'){
-                    $("#sea-text").fadeOut(700, function() {
-                        // Animation complete
-                        console.log("fade out?");
-                    });
+            // $("#sea-anchor").waypoint(function(direction){
+            //     if (direction == 'up'){
+            //         $("#sea-text").fadeOut(700, function() {
+            //             // Animation complete
+            //             console.log("fade out?");
+            //         });
+            //     }
+            // });
+
+            // $("#fade-black").waypoint(function(direction){
+            //     if (direction == 'down'){
+            //         $(this).addClass('black-screen');
+            //     }
+            // })
+
+
+            function fader() {
+                var st = $('#sea-text'), 
+                    wh = $(window).height(),
+                    dt = $(document).scrollTop(), 
+                    redView  = wh - (st.offset().top - dt),
+                    op;
+
+                if (redView > 0) {
+                    op = 1 / (wh + st.height() - 500) * redView;
+                    if (op <= 1)
+                        st.css('opacity', op);
                 }
-            });
+
+                // Add this line for a possible help in understanding:
+                console.log(
+                     'Window Height:', wh, 
+                     'Doc Scroll Top', dt, 
+                     'Red offset top:', r.offset().top, 
+                     'Red offs.top - Doc Scroll Top', r.offset().top - dt, 
+                     'View:', wh - (r.offset().top - dt)
+                );
+            }
+            // Attach scroll event to the function fader()
+            $(document).bind('scroll', fader);
 
 
         })
@@ -152,4 +218,32 @@
         ga('send', 'pageview');
         
     </script>
+
+    <script src="js/three.min.js"></script>
+    <script src="js/FirstPersonControls.js"></script>
+    <script src="js/TrackballControls.js"></script>
+    <script>
+    var scene = new THREE.Scene();
+    var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+    var renderer = new THREE.WebGLRenderer( { alpha: true } );
+    renderer.setClearColor( 0x000000, 0 ); // the default
+    renderer.setSize(document.getElementById("cube").offsetWidth, document.getElementById("cube").offsetHeight);
+    renderer.setSize( window.innerWidth, window.innerHeight );
+    document.getElementById("cube").appendChild(renderer.domElement);
+    var geometry = new THREE.CubeGeometry(1.5,1.5,1.5);
+    var material = new THREE.MeshBasicMaterial( { color: 0x0000ff } );
+    var cube = new THREE.Mesh( geometry, material );
+    scene.add( cube );
+    camera.position.z = 3;
+    function render() {
+        requestAnimationFrame(render);
+        cube.rotation.x += 0.01;
+        cube.rotation.y += 0.01;
+        renderer.render(scene, camera);
+        
+        
+        
+    }
+    render();
+            </script>
 </html>
