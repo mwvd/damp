@@ -37,14 +37,16 @@
         <script src="js/three.min.js"></script>
         <script src="js/FirstPersonControls.js"></script>
         <script src="js/TrackballControls.js"></script>
+        <script src="js/detector.js"></script>
+        <script src="js/stats.min.js"></script>
 
     <body>
         <div class="blue-screen">
             <a href="#preface">
                 <svg version="1.1" id="arrow-down" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="68.483px" height="61.375px" viewBox="0 0 68.483 61.375" enable-background="new 0 0 68.483 61.375" xml:space="preserve">
-<polyline fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" points="65.965,2.501 34.5,57.002 3.035,2.501 "/>
-</svg>
+            	 width="68.483px" height="61.375px" viewBox="0 0 68.483 61.375" enable-background="new 0 0 68.483 61.375" xml:space="preserve">
+                <polyline fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" points="65.965,2.501 34.5,57.002 3.035,2.501 "/>
+                </svg>
             </a>
         </div>
 
@@ -95,12 +97,12 @@
                     <br>
                     <br>
                     <br>
-                    The Sea is a different environment. It is very cold in some regions. The deepest extents of The Sea meets the ends and the beginings of the Earth. Some think it could be a home for us in the future. Until then we are the empty half of the glass. To travel deep into The Sea, we will need help. The deeper we go, the more help we will need. When we finally walk on the bedrock of the ocean, we will have had so much help. We will be grateful for everything. Things will be great. We will have learned to breathe underwater. And then we can begin drilling to the molten underneath, and then to the core.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean feugiat aliquam lectus, quis gravida dui pharetra quis. Sed gravida tellus quis euismod hendrerit. Suspendisse quis elit eu nisi imperdiet luctus et mollis felis. Sed nec tortor non risus volutpat scelerisque. Suspendisse potenti. Fusce non lectus molestie, lacinia lectus sed, ullamcorper lectus. Donec id nisl metus. Maecenas eget hendrerit metus. Suspendisse eget diam adipiscing, auctor leo eget, interdum leo. Curabitur mattis vehicula dui nec euismod. Pellentesque luctus rhoncus fringilla. Vivamus congue nibh ac luctus elementum. Aenean et tellus id elit sollicitudin fermentum. Vivamus adipiscing non leo et placerat. Donec iaculis condimentum leo vitae eleifend.
                     <br>
                     <br>
                     <br>
 
-For the time being, we are only floating on the surface.
+                    For the time being, we are only floating on the surface.
                 </p>
                 <div id="end-sea"></div>
             </div>
@@ -131,6 +133,39 @@ For the time being, we are only floating on the surface.
             
         </div>
 
+        <div class="blue-screen">
+            
+        </div>
+
+        <div class="blue-screen">
+            <div class="text-wrapper" id="the-essay">
+                <h2>
+                    Chapter Essay
+                    <br>
+                    Something
+                </h2>
+                <p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    The Sea is a different environment. It is very cold in some regions. The deepest extents of The Sea meets the ends and the beginings of the Earth. Some think it could be a home for us in the future. Until then we are the empty half of the glass. To travel deep into The Sea, we will need help. The deeper we go, the more help we will need. When we finally walk on the bedrock of the ocean, we will have had so much help. We will be grateful for everything. Things will be great. We will have learned to breathe underwater. And then we can begin drilling to the molten underneath, and then to the core.
+                    <br>
+                    <br>
+                    <br>
+
+                    For the time being, we are only floating on the surface.
+                </p>
+                <div id="end-essay"></div>
+            </div>
+        </div>
+
+        <div class="sea">
+            <div class="wrap" id="seawrap">
+                <div id="container"></div>
+            </div>
+        </div>
+
 
     </body>
 
@@ -140,57 +175,33 @@ For the time being, we are only floating on the surface.
     <script>
 
         $(function(){
-            // $("#end-preface").waypoint(function(direction){
-            //     if (direction == 'down'){
-            //         $("#sea-text").fadeIn(700, function() {
-            //             // Animation complete
-            //             console.log("fade?");
-            //         });
-            //     }
-            // });
-
-            // $("#sea-anchor").waypoint(function(direction){
-            //     if (direction == 'up'){
-            //         $("#sea-text").fadeOut(700, function() {
-            //             // Animation complete
-            //             console.log("fade out?");
-            //         });
-            //     }
-            // });
-
-            // $("#fade-black").waypoint(function(direction){
-            //     if (direction == 'down'){
-            //         $(this).addClass('black-screen');
-            //     }
-            // })
-
 
             function fader() {
-                var st = $('#sea-text'), 
-                    wh = $(window).height(),
+                var r = $('#sea-text'),  
+                    b = $('#the-essay'),  
+                    wh = $(window).height(),  
                     dt = $(document).scrollTop(), 
-                    redView  = wh - (st.offset().top - dt),
-                    op;
+                    redView  = wh - (r.offset().top - dt),
 
+                    blueView = wh - (b.offset().top - dt),
+
+                    op;
                 if (redView > 0) {
-                    op = 1 / (wh + st.height() - 500) * redView;
+
+                    op = 1 / (wh + r.height() - 500 ) * redView;
+
                     if (op <= 1)
-                        st.css('opacity', op);
+                        r.css('opacity', op);
+                }
+                if (blueView > 0) {
+                    op = 1 / (wh + b.height() - 500) * blueView;
+                    if (op <= 1)
+                        b.css('opacity', op);
                 }
 
-                // Add this line for a possible help in understanding:
-                console.log(
-                     'Window Height:', wh, 
-                     'Doc Scroll Top', dt, 
-                     'Red offset top:', r.offset().top, 
-                     'Red offs.top - Doc Scroll Top', r.offset().top - dt, 
-                     'View:', wh - (r.offset().top - dt)
-                );
             }
             // Attach scroll event to the function fader()
             $(document).bind('scroll', fader);
-
-
         })
 
         //smooth scroll anchor links 
@@ -221,31 +232,148 @@ For the time being, we are only floating on the surface.
         
     </script>
 
-    <script src="js/three.min.js"></script>
-    <script src="js/FirstPersonControls.js"></script>
-    <script src="js/TrackballControls.js"></script>
     <script>
-    var scene = new THREE.Scene();
-    var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
-    var renderer = new THREE.WebGLRenderer( { alpha: true } );
-    renderer.setClearColor( 0x000000, 0 ); // the default
-    renderer.setSize(document.getElementById("cube").offsetWidth, document.getElementById("cube").offsetHeight);
-    renderer.setSize( window.innerWidth, window.innerHeight );
-    document.getElementById("cube").appendChild(renderer.domElement);
-    var geometry = new THREE.CubeGeometry(1.5,1.5,1.5);
-    var material = new THREE.MeshBasicMaterial( { color: 0x0000ff } );
-    var cube = new THREE.Mesh( geometry, material );
-    scene.add( cube );
-    camera.position.z = 3;
-    function render() {
-        requestAnimationFrame(render);
-        cube.rotation.x += 0.01;
-        cube.rotation.y += 0.01;
-        renderer.render(scene, camera);
-        
-        
-        
-    }
-    render();
-            </script>
+        var scene = new THREE.Scene();
+        var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+        var renderer = new THREE.WebGLRenderer( { alpha: true } );
+        renderer.setClearColor( 0x000000, 0 ); // the default
+        renderer.setSize(document.getElementById("cube").offsetWidth, document.getElementById("cube").offsetHeight);
+        renderer.setSize( window.innerWidth, window.innerHeight );
+        document.getElementById("cube").appendChild(renderer.domElement);
+        var geometry = new THREE.CubeGeometry(1.5,1.5,1.5);
+        var material = new THREE.MeshBasicMaterial( { color: 0x0000ff } );
+        var cube = new THREE.Mesh( geometry, material );
+        scene.add( cube );
+        camera.position.z = 3;
+        function render() {
+            requestAnimationFrame(render);
+            cube.rotation.x += 0.01;
+            cube.rotation.y += 0.01;
+            renderer.render(scene, camera);    
+        }
+        render();
+    </script>
+
+    <script>
+
+        if ( ! Detector.webgl ) {
+            Detector.addGetWebGLMessage();
+            document.getElementById( 'container' ).innerHTML = "";
+        }
+
+        var container, stats;
+        var camera, controls, scene, renderer;
+        var mesh, texture, geometry, material;
+        var worldWidth = 128, worldDepth = 128,
+        worldHalfWidth = worldWidth / 2, worldHalfDepth = worldDepth / 2;
+        var clock = new THREE.Clock();
+
+        init();
+        animate();
+
+        function init() {
+            container = document.getElementById( 'container' );
+            camera = new THREE.PerspectiveCamera( 60, document.getElementById("seawrap").offsetWidth / document.getElementById("seawrap").offsetHeight, 1, 20000 );
+
+            camera.position.y = 200;
+            controls = new THREE.FirstPersonControls( camera );
+
+            controls.movementSpeed = 500;
+            controls.lookSpeed = 0.1
+            scene = new THREE.Scene();
+            scene.fog = new THREE.FogExp2( 0xaaccff, 0.0007 );
+            geometry = new THREE.PlaneGeometry( 20000, 20000, worldWidth - 1, worldDepth - 1 );
+            geometry.applyMatrix( new THREE.Matrix4().makeRotationX( - Math.PI / 2 ) );
+            geometry.dynamic = true;
+
+            var i, j, il, jl;
+
+            for ( i = 0, il = geometry.vertices.length; i < il; i ++ ) {
+
+                geometry.vertices[ i ].y = 35 * Math.sin( i/2 );
+
+            }
+
+            geometry.computeFaceNormals();
+            geometry.computeVertexNormals();
+
+            var texture = THREE.ImageUtils.loadTexture( "assets/water.jpg" );
+            texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
+            texture.repeat.set( 5, 5 );
+
+            material = new THREE.MeshBasicMaterial( { color: 0x0044ff, map: texture } );
+
+            mesh = new THREE.Mesh( geometry, material );
+            scene.add( mesh );
+
+            renderer = new THREE.WebGLRenderer();
+            renderer.setClearColor( 0xaaccff, 1 );
+
+            renderer.setSize(document.getElementById("seawrap").offsetWidth, document.getElementById("seawrap").offsetHeight);
+
+            container.innerHTML = "";
+
+            container.appendChild( renderer.domElement );
+
+            stats = new Stats();
+            stats.domElement.style.position = 'absolute';
+            stats.domElement.style.top = '0px';
+            container.appendChild( stats.domElement );
+
+            //
+
+            window.addEventListener( 'resize', onWindowResize, false );
+
+        }
+
+        function onWindowResize() {
+
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+
+            renderer.setSize(document.getElementById("seawrap").offsetWidth, document.getElementById("seawrap").offsetHeight);
+
+
+            controls.handleResize();
+
+        }
+
+        //
+
+        function animate() {
+
+            requestAnimationFrame( animate );
+
+            render();
+            stats.update();
+
+        }
+
+        function render() {
+
+            var delta = clock.getDelta(),
+                time = clock.getElapsedTime() * 10;
+
+            for ( var i = 0, l = geometry.vertices.length; i < l; i ++ ) {
+
+                geometry.vertices[ i ].y = 35 * Math.sin( i / 5 + ( time + i ) / 7 );
+
+            }
+
+            //geometry.computeFaceNormals();
+            //geometry.computeVertexNormals();
+
+            mesh.geometry.verticesNeedUpdate = true;
+            //mesh.geometry.normalsNeedUpdate = true;
+
+            controls.update( delta );
+            renderer.render( scene, camera );
+
+        }
+
+    </script>
+
+
+
+
 </html>

@@ -90,6 +90,37 @@ $fstack: "Andale Mono", AndaleMono, "Inconsolata", Consolas, monaco, monospace;
 	left: -80px;
 }
 
+.sea {
+	height: 100%;
+	width: 100%;
+	#seawrap{
+		color: #61443e;
+		font-family:Monospace;
+		font-size:13px;
+		text-align:center;
+		background-color: #aaccff;
+		margin: 0px;
+		overflow: hidden;
+		height: 100%;
+		width: 100%;
+	}
+
+	#info {
+		color: #ffffff;
+		position: absolute;
+		top: 0px; width: 100%;
+		padding: 5px;
+	}
+
+	a {
+		color: yellow;
+	}
+
+	#oldie {
+		background:rgb(0,0,50) !important;
+		color:#fff !important;
+	}
+}
 
 
 #arrow-down{
@@ -115,6 +146,11 @@ $fstack: "Andale Mono", AndaleMono, "Inconsolata", Consolas, monaco, monospace;
 #sea-text{
 	opacity: 0;
     text-align: center;
+}
+
+#the-essay{
+	opacity: 0;
+	text-align: center;
 }
 
 .text-wrapper{
