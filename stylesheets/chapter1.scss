@@ -1,0 +1,54 @@
+$fstack: "Andale Mono", AndaleMono, "Inconsolata", Consolas, monaco, monospace;
+
+@mixin blue-page{
+	min-height: 100%;
+	width: 100%;
+	background: #0000FF;
+}
+
+.blue-screen{
+	height: 100%;
+	width: 100%;
+	background: #0000FF;
+}
+
+#arrow-down{
+	width: 100%;
+	margin: auto;
+	position: absolute;
+	top: 50%;
+}
+
+.anchor-above{
+	margin-top:-100px;
+}
+
+.preface{
+	@include blue-page;
+}
+
+.the-sea{
+	@include blue-page;
+}
+
+#sea-text{
+	display: none;
+}
+
+.text-wrapper{
+	width: 60%;
+	margin: auto;
+	
+	h2{
+		font: 36px $fstack;
+		text-align: center;
+		color: #fff;
+	}
+	
+	p{
+		font: 12px $fstack;
+		color: #fff;
+		line-height: 20px;
+	}
+}
+

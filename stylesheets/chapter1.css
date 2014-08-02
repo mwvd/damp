@@ -1,0 +1,38 @@
+.blue-screen {
+  height: 100%;
+  width: 100%;
+  background: #0000FF; }
+
+#arrow-down {
+  width: 100%;
+  margin: auto;
+  position: absolute;
+  top: 50%; }
+
+.anchor-above {
+  margin-top: -100px; }
+
+.preface {
+  min-height: 100%;
+  width: 100%;
+  background: #0000FF; }
+
+.the-sea {
+  min-height: 100%;
+  width: 100%;
+  background: #0000FF; }
+
+#sea-text {
+  display: none; }
+
+.text-wrapper {
+  width: 60%;
+  margin: auto; }
+  .text-wrapper h2 {
+    font: 36px "Andale Mono", AndaleMono, "Inconsolata", Consolas, monaco, monospace;
+    text-align: center;
+    color: #fff; }
+  .text-wrapper p {
+    font: 12px "Andale Mono", AndaleMono, "Inconsolata", Consolas, monaco, monospace;
+    color: #fff;
+    line-height: 20px; }
