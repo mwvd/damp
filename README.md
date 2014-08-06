@@ -15,7 +15,7 @@ presented in 2 chapters
 ```
 
 damp magazine {
-    issue #1: oil money;
+    issue #0: icarus;
     coming: when it's done and ready;
     }
 
