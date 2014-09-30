@@ -1,0 +1,284 @@
+#top, #bottom, #left, #right {
+	background: #ffffff;
+	position: fixed;
+	}
+	#left, #right {
+		top: 0; bottom: 0;
+		width: 15px;
+		}
+		#left { left: 0; }
+		#right { right: 0; }
+		
+	#top, #bottom {
+		left: 0; right: 0;
+		height: 170px;
+		    z-index: 10;
+		}
+		#top { top: 0; }
+		#bottom { bottom: 0; }
+  
+  .glitch {
+  color: white;
+  position: relative;
+  width: 700px;
+  margin: 0 auto;
+}
+
+@-webkit-keyframes noise-anim {
+  0% {
+    clip: rect(36px, 9999px, 34px, 0);
+  }
+
+  5% {
+    clip: rect(15px, 9999px, 6px, 0);
+  }
+
+  10% {
+    clip: rect(72px, 9999px, 10px, 0);
+  }
+
+  15.0% {
+    clip: rect(39px, 9999px, 74px, 0);
+  }
+
+  20% {
+    clip: rect(45px, 9999px, 30px, 0);
+  }
+
+  25% {
+    clip: rect(2px, 9999px, 71px, 0);
+  }
+
+  30.0% {
+    clip: rect(32px, 9999px, 14px, 0);
+  }
+
+  35% {
+    clip: rect(14px, 9999px, 78px, 0);
+  }
+
+  40% {
+    clip: rect(94px, 9999px, 3px, 0);
+  }
+
+  45% {
+    clip: rect(76px, 9999px, 78px, 0);
+  }
+
+  50% {
+    clip: rect(31px, 9999px, 22px, 0);
+  }
+
+  55.0% {
+    clip: rect(22px, 9999px, 59px, 0);
+  }
+
+  60.0% {
+    clip: rect(53px, 9999px, 49px, 0);
+  }
+
+  65% {
+    clip: rect(64px, 9999px, 73px, 0);
+  }
+
+  70% {
+    clip: rect(97px, 9999px, 80px, 0);
+  }
+
+  75% {
+    clip: rect(82px, 9999px, 21px, 0);
+  }
+
+  80% {
+    clip: rect(3px, 9999px, 95px, 0);
+  }
+
+  85.0% {
+    clip: rect(67px, 9999px, 39px, 0);
+  }
+
+  90% {
+    clip: rect(3px, 9999px, 76px, 0);
+  }
+
+  95% {
+    clip: rect(31px, 9999px, 12px, 0);
+  }
+
+  100% {
+    clip: rect(2px, 9999px, 81px, 0);
+  }
+}
+.glitch:after {
+  content: attr(data-text);
+  position: absolute;
+  left: 2px;
+  text-shadow: -1px 0 red;
+  top: 0;
+  color: white;
+  background: black;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  -webkit-animation: noise-anim 2s infinite linear alternate-reverse;
+}
+
+@-webkit-keyframes noise-anim-2 {
+  0% {
+    clip: rect(68px, 9999px, 24px, 0);
+  }
+
+  5% {
+    clip: rect(91px, 9999px, 3px, 0);
+  }
+
+  10% {
+    clip: rect(97px, 9999px, 93px, 0);
+  }
+
+  15.0% {
+    clip: rect(26px, 9999px, 73px, 0);
+  }
+
+  20% {
+    clip: rect(26px, 9999px, 51px, 0);
+  }
+
+  25% {
+    clip: rect(14px, 9999px, 100px, 0);
+  }
+
+  30.0% {
+    clip: rect(86px, 9999px, 88px, 0);
+  }
+
+  35% {
+    clip: rect(26px, 9999px, 17px, 0);
+  }
+
+  40% {
+    clip: rect(77px, 9999px, 88px, 0);
+  }
+
+  45% {
+    clip: rect(37px, 9999px, 95px, 0);
+  }
+
+  50% {
+    clip: rect(62px, 9999px, 81px, 0);
+  }
+
+  55.0% {
+    clip: rect(25px, 9999px, 6px, 0);
+  }
+
+  60.0% {
+    clip: rect(88px, 9999px, 98px, 0);
+  }
+
+  65% {
+    clip: rect(32px, 9999px, 22px, 0);
+  }
+
+  70% {
+    clip: rect(81px, 9999px, 42px, 0);
+  }
+
+  75% {
+    clip: rect(34px, 9999px, 49px, 0);
+  }
+
+  80% {
+    clip: rect(91px, 9999px, 55px, 0);
+  }
+
+  85.0% {
+    clip: rect(15px, 9999px, 13px, 0);
+  }
+
+  90% {
+    clip: rect(46px, 9999px, 96px, 0);
+  }
+
+  95% {
+    clip: rect(51px, 9999px, 67px, 0);
+  }
+
+  100% {
+    clip: rect(71px, 9999px, 8px, 0);
+  }
+}
+.glitch:before {
+  content: attr(data-text);
+  position: absolute;
+  left: -2px;
+  text-shadow: 1px 0 blue;
+  top: 0;
+  color: white;
+  background: black;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  -webkit-animation: noise-anim-2 3s infinite linear alternate-reverse;
+}
+  
+p
+{
+color:#FFFFFF;
+font-size:26px;
+  margin-top:100px;
+text-align:centre;
+}
+ 
+html, body, div.particles {
+  background-color: #000;
+  letter-spacing:2pt;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  font-size:26px;
+  line-height:1;
+  border: 0;
+  font-family:helvetica, sans-serif;
+  text-transform:uppercase;
+  width: 100%;
+  font-weight:bold;
+
+}
+
+textarea {
+  opacity: 0.0;
+  position: absolute;
+  z-index: 10;
+  top: 10em;
+}
+
+#container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+#stats {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+/* Info */
+@keyframes show-info {
+  0% {
+    transform: rotateY(120deg);
+  }
+
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+img.chromoji {
+    width: 1em !important;
+    height:1em !important;
+}
+
+.chromoji-font, #chromoji-font {
+    font-size:1em !important;
+}

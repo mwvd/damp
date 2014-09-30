@@ -1,0 +1,7 @@
+1   Make sure three.js doesn't run on mobile
+2   Add in table of contents
+
+        Maybe like
+        
+        <div class="explore"></div> .explore {w/h: 100%}
+        <div class="tableoc"></div> .tableoc {w: 100%}
