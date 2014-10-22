@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<!--
+
+    ____  ___    __  _______ 
+   / __ \/   |  /  |/  / __ \
+  / / / / /| | / /|_/ / /_/ /
+ / /_/ / ___ |/ /  / / ____/ 
+/_____/_/  |_/_/  /_/_/      
+                              
+    ____  ____  ____  __________ 
+   / __ )/ __ \/ __ \/ ____/ __ \
+  / __  / / / / /_/ / __/ / / / /
+ / /_/ / /_/ / _, _/ /___/ /_/ / 
+/_____/\____/_/ |_/_____/_____/  
+                                 
+
+416 / YYZ
+
+                     Mackenzie Davidson
+                     Peter Li
+                     Theresa Ma
+                     Theodore Fox
+                     Susie Kim
+                     Ben Milligan
+                      
+contribute: https://github.com/mwvd/damp
+        or: mwvdavidson@gmail.com
+
+2k14                      
+-->
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta charset="UTF-8">
+
+
+    <title>Bored</title>
+    
+    <meta property="og:title" content="damp // issue #0: icarus" />
+        <meta property="og:type" content="article" />
+        <meta property="og:image" content="https://raw.githubusercontent.com/mwvd/damp/gh-pages/assets/1.png" />
+        <meta property="og:url" content="http://mwvd.github.io/damp/" />
+        <meta property="og:description" content="everything is cold // everything is quiet // everything is temporary" />
+        
+        <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="five.css">
+
+    <script>
+        window.open = function () {};
+        window.print = function () {};
+         // Support hover state for mobile.
+        if (false) {
+            window.ontouchstart = function () {};
+        }
+    </script>
+
+</head>
+
+<body>
+    <canvas id="canvas" height="2000" width="1232"></canvas>
+    <script>
+        RememberScroll.init();
+    </script>
+
+    <script>
+        if (document.location.search.match(/type=embed/gi)) {
+            window.parent.postMessage('resize', "*");
+        }
+    </script>
+
+    <script>
+        function Block(x, y, s, c) {
+            this.x = x;
+            this.y = y;
+            this.s = s;
+            this.c = c;
+
+            this.static = true;
+            this.vx = 0;
+            this.vy = 0;
+
+            this.o = 1;
+            this.r = 0;
+            this.sx = x;
+            this.sy = y;
+        }
+        Block.prototype = {
+            constructor: Block,
+            update: function () {
+                this.x += this.vx;
+                this.y += this.vy;
+
+                this.vy += settings.gravity;
+                this.vx += settings.wind;
+
+                this.r += .1;
+
+                if (this.vy > settings.max_velocity) {
+                    this.vy = settings.max_velocity;
+                }
+                if (this.vx > settings.max_velocity) {
+                    this.vx = settings.max_velocity;
+                }
+                this.o = 1 - ((Date.now() - this.start) / settings.lifespan);
+                console.log(1 - ((this.start - Date.now()) / settings.lifespan));
+            },
+            reset: function () {
+                this.x = this.sx;
+                this.y = this.sy;
+                this.static = true;
+                this.o = 0;
+                this.r = 0;
+                this.vx = 0;
+                this.vy = 0;
+            },
+            render: function (context) {
+                context.save();
+                context.translate(this.x, this.y);
+                context.rotate(this.vx * this.r);
+                context.beginPath();
+                context.globalAlpha = this.o;
+                context.rect(-this.s / 2, -this.s / 2, this.s, this.s);
+                context.fillStyle = this.c;
+                context.fill();
+                context.closePath();
+                context.restore();
+            }
+        };
+
+        var canvas = document.getElementById('canvas'),
+            context = canvas.getContext('2d'),
+            height, width, settings, blocks, size;
+        setTimeout(init, 10);
+
+        function init() {
+            height = canvas.height = document.body.offsetHeight;
+            width = canvas.width = document.body.offsetWidth;
+            settings = {
+                gravity: .1,
+                wind: 0,
+                max_velocity: 5,
+                lifespan: 3000
+            };
+            blocks = [];
+            size = width / 24 | 0;
+            for (var y = 24; y >= 0; y--) {
+                for (var x = 0; x < width + size; x += size) {
+                    blocks.push(new Block(x, y * size, size, color()));
+                }
+            }
+            update();
+            render();
+            canvas.onmousemove = listen;
+        }
+
+        function color() {
+            return 'rgb(' + (Math.random() * 0 | 0) + ',' + (0 | 0) + ',' + (0 | 0) + ')';
+        }
+
+        function listen(e) {
+            var ex = e.clientX,
+                ey = e.clientY,
+                t = size / 4;
+            for (var i = 0, l = blocks.length; i < l; i++) {
+                if (!blocks[i].static) {
+                    continue;
+                }
+                var b = blocks[i],
+                    hs = b.s / 2,
+                    bx1 = b.x - hs,
+                    bx2 = b.x + hs,
+                    by1 = b.y - hs,
+                    by2 = b.y + hs;
+                if (ex >= bx1 && ex <= bx2 && ey >= by1 && ey <= by2) {
+                    blocks[i].static = false;
+                    blocks[i].vx = Math.random() * 4 - 2;
+                    blocks[i].vy = Math.random() * 4 - 2;
+                    blocks[i].start = Date.now();
+                    return;
+                }
+            }
+        }
+
+        function update() {
+            for (var i = 0, l = blocks.length; i < l; i++) {
+                if (blocks[i].o < 1) {
+                    blocks[i].o += .05;
+                }
+                if (blocks[i].static) {
+                    continue;
+                }
+                var now = Date.now();
+                if (now - blocks[i].start > settings.lifespan) {
+                    blocks[i].reset();
+                    continue;
+                }
+                blocks[i].update();
+            }
+            setTimeout(update, 1000 / 60);
+        }
+
+        function render() {
+            context.clearRect(0, 0, width, height);
+            for (var i = 0, l = blocks.length; i < l; i++) {
+                blocks[i].render(context);
+            }
+            requestAnimationFrame(render);
+        }
+         //@ sourceURL=pen.js
+    </script>
+
+    <center>
+        <br>
+        <br>
+        <br>
+        <br>If I could hold the moment in my hand
+        <br>I would compress it
+        <br>Into a small cube
+        <br>So it could fit into an ice tray
+        <br>
+        <br>I would put it in my freezer
+        <br>And probably never touch it
+        <br>Until Spring Cleaning
+        <br>
+        <br>The Moment:
+        <br>I wait for it
+        <br>Like you wait for your last song
+        <br>At your deathbed wedding
+        <br>
+        <br>I know I’m scared
+        <br>But please ask me
+        <br>If I’m scared
+        <br>I want to know
+        <br>How I lie
+        <br>
+        <br>
+        <br>If I could hold the moment in my hand
+        <br>I would throw it in the air
+        <br>And let the London wind
+        <br>Take it to the river
+        <br>
+        <br>The turtles would eat it
+        <br>Because they are &nbsp;&nbsp;&nbsp;slow
+        <br>Or are they living
+        <br>At the right pace?
+        <br>
+        <br>I don’t know
+        <br>But
+        <br>I know that:
+        <br>
+        <br>The moment
+        <br>Makes ME feel comfortably sick
+        <br>
+        <br>
+        <br>
+        <br>
+    </center>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-55931307-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+
+</html>

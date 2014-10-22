@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<!--
+
+    ____  ___    __  _______ 
+   / __ \/   |  /  |/  / __ \
+  / / / / /| | / /|_/ / /_/ /
+ / /_/ / ___ |/ /  / / ____/ 
+/_____/_/  |_/_/  /_/_/      
+                              
+    ____  ______    __    ___    ____ 
+   / __ \/  _/ /   / /   /   |  / __ \
+  / /_/ // // /   / /   / /| | / /_/ /
+ / ____// // /___/ /___/ ___ |/ _, _/ 
+/_/   /___/_____/_____/_/  |_/_/ |_|  
+                                      
+
+416 / YYZ
+
+                     Mackenzie Davidson
+                     Peter Li
+                     Theresa Ma
+                     Theodore Fox
+                     Susie Kim
+                     Ben Milligan
+                      
+contribute: https://github.com/mwvd/damp
+        or: mwvdavidson@gmail.com
+
+2k14                      
+-->
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Pillar</title>
+    <meta property="og:title" content="damp // issue #0: icarus" />
+        <meta property="og:type" content="article" />
+        <meta property="og:image" content="https://raw.githubusercontent.com/mwvd/damp/gh-pages/assets/1.png" />
+        <meta property="og:url" content="http://mwvd.github.io/damp/" />
+        <meta property="og:description" content="everything is cold // everything is quiet // everything is temporary" />
+        
+        <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="three.css">
+
+    <script type="text/javascript">
+        function toggle_visibility(id) {
+            var e = document.getElementById(id);
+            if (e.style.display == 'block')
+                e.style.display = 'none';
+            else
+                e.style.display = 'block';
+        }
+    </script>
+
+    <script>
+        window.open = function () {};
+        window.print = function () {};
+         // Support hover state for mobile.
+        if (false) {
+            window.ontouchstart = function () {};
+        }
+    </script>
+
+
+
+</head>
+
+<body>
+    <script>
+        window.open = function () {};
+        window.print = function () {};
+         // Support hover state for mobile.
+        if (false) {
+            window.ontouchstart = function () {};
+        }
+    </script>
+
+    <div class="glitch" data-text="LISTEN: 
+YOU ARE THE JUDICIAL SYSTEM OF MY ANATOMY">
+        <p>
+            listen:
+            <br>you are the judicial system of my anatomy.
+            <br>
+            <br>the following is a lesson on biology.
+            <br>
+            <div class="glitch" data-text="WHEN YOU SPEAK">
+                when you speak</div>
+            your words form a bolus
+            <br>in the back of my throat
+            <br>and carries through
+            <br>my entire being;
+            <br>my ugly lungs and heart,
+            <br>my awful offals, until
+            <br>they germinate in my stomach
+            <br>and watermelon vines
+            <br>
+            <div class="glitch" data-text="GROW OUT OF MY">
+                grow out of my
+                <br>
+            </div>
+            <div class="glitch" data-text="MOUTH">
+                mouth.</div>
+            <br>
+            <br>when the sediment of
+            <br>your sentiments lodge in my
+            <br>aorta, capillaries,
+            <br>clog all my veins and vessels,
+            <br>your police state mouth
+            <br>will tell me, "you are now under cardiac arrest."
+            <br>
+            <br>
+            <br>when I pass on
+            <br>you will weep with
+            <br>furrowed brows and ask me,
+            <br>
+            <div class="glitch" data-text="SHALL I GO ON? SHALL I BE HAPPY?">
+                "shall I go on? shall I be happy?</div>
+            forget and move on?
+            <br>is my happiness your happiness?"
+            <br>
+            <br>
+            <br>and from the afterlife I will
+            <br>look on you and say no.
+            <br>do not move on.
+            <br>do not move forward.
+            <br>keep looking back and become
+            <br>
+            <br>
+            <br>pillars of salt;
+            <br>
+            <br>
+            <br>become melancholy
+            <br>monuments of my absence.
+            <br>
+            <br>
+            <br>for when I go down I bring
+            <br>
+            <div class="glitch" data-text="EVERYONE DOWN WITH ME.">
+                everyone down with me.
+            </div>
+        </p>
+    </div>
+    <div id='container'>
+    </div>
+
+    <script>
+        if (document.location.search.match(/type=embed/gi)) {
+            window.parent.postMessage('resize', "*");
+        }
+    </script>
+
+    <script>
+        var NUM_PARTICLES = ((ROWS = 250) * (COLS = 130)),
+            THICKNESS = Math.pow(80, 2),
+            SPACING = 10,
+            MARGIN = 1,
+            COLOR = 220,
+            DRAG = 0.9,
+            EASE = 0.5,
+
+            /*
+
+    used for sine approximation, but Math.sin in Chrome is still fast enough :)http://jsperf.com/math-sin-vs-sine-approximation
+
+    B = 4 / Math.PI,
+    C = -4 / Math.pow( Math.PI, 2 ),
+    P = 0.225,
+
+    */
+
+            container,
+            particle,
+            canvas,
+            mouse,
+            stats,
+            list,
+            ctx,
+            tog,
+            man,
+            dx, dy,
+            mx, my,
+            d, t, f,
+            a, b,
+            i, n,
+            w, h,
+            p, s,
+            r, c;
+
+        particle = {
+            vx: 0,
+            vy: 0,
+            x: 0,
+            y: 0
+        };
+
+        function init() {
+
+            container = document.getElementById('container');
+            canvas = document.createElement('canvas');
+
+            ctx = canvas.getContext('2d');
+            man = false;
+            tog = true;
+
+            list = [];
+
+            w = canvas.width = COLS * SPACING + MARGIN * 2;
+            h = canvas.height = ROWS * SPACING + MARGIN * 2;
+
+            container.style.marginLeft = Math.round(w * -0.5) + 'px';
+            container.style.marginTop = Math.round(h * -0.5) + 'px';
+
+            for (i = 0; i < NUM_PARTICLES; i++) {
+
+                p = Object.create(particle);
+                p.x = p.ox = MARGIN + SPACING * (i % COLS);
+                p.y = p.oy = MARGIN + SPACING * Math.floor(i / COLS);
+
+                list[i] = p;
+            }
+
+            container.addEventListener('mousemove', function (e) {
+
+                bounds = container.getBoundingClientRect();
+                mx = e.clientX - bounds.left;
+                my = e.clientY - bounds.top;
+                man = true;
+
+            });
+
+            if (typeof Stats === 'function') {
+                document.body.appendChild((stats = new Stats()).domElement);
+            }
+
+            container.appendChild(canvas);
+        }
+
+        function step() {
+
+            if (stats) stats.begin();
+
+            if (tog = !tog) {
+
+                if (!man) {
+
+                    t = +new Date() * 0.001;
+                    mx = w * 0.5 + (Math.cos(t * 2.1) * Math.cos(t * 0.9) * w * 0.45);
+                    my = h * 0.5 + (Math.sin(t * 3.2) * Math.tan(Math.sin(t * 0.8)) * h * 0.45);
+                }
+
+                for (i = 0; i < NUM_PARTICLES; i++) {
+
+                    p = list[i];
+
+                    d = (dx = mx - p.x) * dx + (dy = my - p.y) * dy;
+                    f = -THICKNESS / d;
+
+                    if (d < THICKNESS) {
+                        t = Math.atan2(dy, dx);
+                        p.vx += f * Math.cos(t);
+                        p.vy += f * Math.sin(t);
+                    }
+
+                    p.x += (p.vx *= DRAG) + (p.ox - p.x) * EASE;
+                    p.y += (p.vy *= DRAG) + (p.oy - p.y) * EASE;
+
+                }
+
+            } else {
+
+                b = (a = ctx.createImageData(w, h)).data;
+
+                for (i = 0; i < NUM_PARTICLES; i++) {
+
+                    p = list[i];
+                    b[n = (~~p.x + (~~p.y * w)) * 4] = b[n + 1] = b[n + 2] = COLOR, b[n + 3] = 255;
+                }
+
+                ctx.putImageData(a, 0, 0);
+            }
+
+            if (stats) stats.end();
+
+            requestAnimationFrame(step);
+        }
+
+        init();
+        step();
+         //@ sourceURL=pen.js
+    </script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-55931307-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</body>
+
+
+</html>

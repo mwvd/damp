@@ -1,0 +1,63 @@
+body {
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+p,
+a {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+    font-family: Courier, monospace;
+    -webkit-font-smoothing: antialiased;
+    margin: 0.8em 0;
+    font-size: 16px;
+    letter-spacing: 5px;
+    color: #fff;
+}
+.ghost,
+.glitch {
+    opacity: 0.25;
+}
+#message {
+    margin-left: -300px;
+    margin-top: -130px;
+    position: absolute;
+    height: 100%;
+    width: 70%;
+    left: 50%;
+    top: 12em;
+}
+#animate {
+    text-shadow: 0 0 8px rgba(209, 194, 165, 0.1);
+    position: absolute;
+    color: #ffffff;
+    bottom: 15em;
+    font-size: 24;
+    font-weight: 9000;
+    left: -3em;
+    text-decoration: none;
+    transform: rotate(90deg);
+}
+#container {
+    background: #0000ff;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+#container:before {
+    pointer-events: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    content: "";
+    left: 0;
+    top: 0;
+}
+img.chromoji {
+    width: 1em !important;
+    height: 1em !important;
+}
+.chromoji-font,
+#chromoji-font {
+    font-size: 1em !important;

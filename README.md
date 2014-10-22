@@ -9,21 +9,19 @@ a publishing experiment for a post-paper society :ocean: :leaves: this is someth
 this is an exploration of what it is like to be young in the 21st century.
 this is an exploration of what it is like to have been born at the end of a millenium.
 
-presented in 2 chapters
+presented in 6 experimental poems
 
 
 ```
 
 damp magazine {
-    issue #0: icarus;
-    coming: when it's done and ready;
+        d-a-m-p.com
     }
 
 ```
 
 
-hmu if you want to contribute: 
-send me a message or [send me an email](mailto:mwvdavidson@gmail.com "hmu")
+Damp is a project conceived and designed by [Mackenzie Davidson](http://mvckenzie.com/) and [Peter Li](http://peters.graphics/), developed in collaboration with [Theresa Ma](http://theresa-ma.com), featuring work by [Theodore Fox](http://theodorefox.com/), Susie Kim, and Ben Milligan.
 
 
 (◕‿◕✿)

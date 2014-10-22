@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<!--
+
+    ____  ___    __  _______ 
+   / __ \/   |  /  |/  / __ \
+  / / / / /| | / /|_/ / /_/ /
+ / /_/ / ___ |/ /  / / ____/ 
+/_____/_/  |_/_/  /_/_/      
+                              
+
+   ________  _____    ____  __    __________
+  / ____/ / / /   |  / __ \/ /   /  _/ ____/
+ / /   / /_/ / /| | / /_/ / /    / // __/   
+/ /___/ __  / ___ |/ _, _/ /____/ // /___   
+\____/_/ /_/_/  |_/_/ |_/_____/___/_____/   
+                                            
+
+
+416 / YYZ
+
+                     Mackenzie Davidson
+                     Peter Li
+                     Theresa Ma
+                     Theodore Fox
+                     Susie Kim
+                     Ben Milligan
+                      
+contribute: https://github.com/mwvd/damp
+        or: mwvdavidson@gmail.com
+
+2k14                      
+-->
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta charset="UTF-8">
+
+
+    <title>Charlie</title>
+    
+    <meta property="og:title" content="damp // issue #0: icarus" />
+        <meta property="og:type" content="article" />
+        <meta property="og:image" content="https://raw.githubusercontent.com/mwvd/damp/gh-pages/assets/1.png" />
+        <meta property="og:url" content="http://mwvd.github.io/damp/" />
+        <meta property="og:description" content="everything is cold // everything is quiet // everything is temporary" />
+        
+        <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="http://s.codepen.io/assets/reset/normalize.css">
+    <link rel="stylesheet" href="charlie.css">
+    <script>
+        window.open = function () {};
+        window.print = function () {};
+        if (false) {
+            window.ontouchstart = function () {};
+        }
+    </script>
+
+    <script src="./index_files/prefixfree.min.js"></script>
+
+    <script src="./index_files/modernizr.js"></script>
+</head>
+
+<body>
+    <div id="_GPL_e6a00_parent_div" style="position: absolute; top: 0px; left: 0px; width: 1px; height: 1px; z-index: 2147483647;">
+        <object type="application/x-shockwave-flash" id="_GPL_e6a00_swf" data="http://cdncache-a.akamaihd.net/items/e6a00/storage.swf?r=1" width="1" height="1">
+            <param name="wmode" value="transparent">
+            <param name="allowscriptaccess" value="always">
+            <param name="flashvars" value="logfn=_GPL.items.e6a00.log&amp;onload=_GPL.items.e6a00.onload&amp;onerror=_GPL.items.e6a00.onerror&amp;LSOName=gpl">
+        </object>
+    </div>
+
+    <div id="container">
+        <div id="message">
+            <span style="cursor:pointer">
+    <a id="animate">...</a>
+    </span>
+            <p>I was asking them if,</p>
+            <p>when we die,</p>
+            <p>if there's an ending</p>
+            <p>to everything we know</p>
+            <p>and if there is,</p>
+            <p>then why dont we just die now,</p>
+            <p>die to everything we know</p>
+            <p>and maybe living and dying</p>
+            <p>are the same thing</p>
+            <p>and maybe the fact</p>
+            <p>that we turned them</p>
+            <p>into two different things</p>
+            <p>is why we feel so lost</p>
+        </div>
+    </div>
+
+    <script src="js/js.js"></script>
+
+    <script>
+        if (document.location.search.match(/type=embed/gi)) {
+            window.parent.postMessage('resize', "*");
+        }
+    </script>
+
+    <script>
+        (function () {
+            var $animate, $container, $message, $paragraph, MESSAGES, animate, initialise, scramble;
+
+            MESSAGES = [];
+
+            MESSAGES.push({
+                delay: 0,
+                text: "I was asking them if,"
+            });
+
+            MESSAGES.push({
+                delay: 700,
+                text: "when we die,"
+            });
+
+            MESSAGES.push({
+                delay: 1000,
+                text: "if there's an ending"
+            });
+
+            MESSAGES.push({
+                delay: 2000,
+                text: "to everything we know"
+            });
+
+            MESSAGES.push({
+                delay: 3000,
+                text: "and if there is,"
+            });
+
+            MESSAGES.push({
+                delay: 4000,
+                text: "then why dont we just die now,"
+            });
+
+            MESSAGES.push({
+                delay: 5000,
+                text: "die to everything we know"
+            });
+
+            MESSAGES.push({
+                delay: 6500,
+                text: "and maybe living and dying"
+            });
+
+            MESSAGES.push({
+                delay: 7500,
+                text: "are the same thing"
+            });
+
+            MESSAGES.push({
+                delay: 8500,
+                text: "and maybe the fact"
+            });
+
+            MESSAGES.push({
+                delay: 9500,
+                text: "that we turned them"
+            });
+
+            MESSAGES.push({
+                delay: 10500,
+                text: "into two different things"
+            });
+
+            MESSAGES.push({
+                delay: 11600,
+                text: "is why we feel so lost"
+            });
+            $container = $("#container");
+
+            $message = $("#message");
+
+            $animate = $("#animate");
+
+            $paragraph = null;
+
+            scramble = function (element, text, options) {
+                var $element, addGlitch, character, defaults, ghostCharacter, ghostCharacters, ghostLength, ghostText, ghosts, glitchCharacter, glitchCharacters, glitchIndex, glitchLength, glitchProbability, glitchText, glitches, i, letter, object, order, output, parameters, settings, shuffle, target, textCharacters, textLength, wrap, _i, _j, _results;
+                defaults = {
+                    probability: 0.5,
+                    glitches: '-|/\\',
+                    blank: '',
+                    duration: text.length * 50,
+                    ease: 'easeInOutQuad',
+                    delay: 0.0
+                };
+                $element = $(element);
+                settings = $.extend(defaults, options);
+                shuffle = function () {
+                    if (Math.random() < 0.5) {
+                        return 1;
+                    } else {
+                        return -1;
+                    }
+                };
+                wrap = function (text, classes) {
+                    return "<span class=\"" + classes + "\">" + text + "</span>";
+                };
+                glitchText = settings.glitches;
+                glitchCharacters = glitchText.split('');
+                glitchLength = glitchCharacters.length;
+                glitchProbability = settings.probability;
+                glitches = (function () {
+                    var _i, _len, _results;
+                    _results = [];
+                    for (_i = 0, _len = glitchCharacters.length; _i < _len; _i++) {
+                        letter = glitchCharacters[_i];
+                        _results.push(wrap(letter, 'glitch'));
+                    }
+                    return _results;
+                })();
+                ghostText = $element.text();
+                ghostCharacters = ghostText.split('');
+                ghostLength = ghostCharacters.length;
+                ghosts = (function () {
+                    var _i, _len, _results;
+                    _results = [];
+                    for (_i = 0, _len = ghostCharacters.length; _i < _len; _i++) {
+                        letter = ghostCharacters[_i];
+                        _results.push(wrap(letter, 'ghost'));
+                    }
+                    return _results;
+                })();
+                textCharacters = text.split('');
+                textLength = textCharacters.length;
+                order = (function () {
+                    _results = [];
+                    for (var _i = 0; 0 <= textLength ? _i < textLength : _i > textLength; 0 <= textLength ? _i++ : _i--) {
+                        _results.push(_i);
+                    }
+                    return _results;
+                }).apply(this).sort(this.shuffle);
+                output = [];
+                for (i = _j = 0; 0 <= textLength ? _j < textLength : _j > textLength; i = 0 <= textLength ? ++_j : --_j) {
+                    glitchIndex = Math.floor(Math.random() * (glitchLength - 1));
+                    glitchCharacter = glitches[glitchIndex];
+                    ghostCharacter = ghosts[i] || settings.blank;
+                    addGlitch = Math.random() < glitchProbability;
+                    character = addGlitch ? glitchCharacter : ghostCharacter;
+                    output.push(character);
+                }
+                object = {
+                    value: 0
+                };
+                target = {
+                    value: 1
+                };
+                parameters = {
+                    duration: settings.duration,
+                    ease: settings.ease,
+                    step: function () {
+                        var index, progress, _k;
+                        progress = Math.floor(object.value * (textLength - 1));
+                        for (i = _k = 0; 0 <= progress ? _k <= progress : _k >= progress; i = 0 <= progress ? ++_k : --_k) {
+                            index = order[i];
+                            output[index] = textCharacters[index];
+                        }
+                        return $element.html(output.join(''));
+                    },
+                    complete: function () {
+                        return $element.html(text);
+                    }
+                };
+                return $(object).delay(settings.delay).animate(target, parameters);
+            };
+
+            animate = function () {
+                var data, element, index, options, _i, _len;
+                for (index = _i = 0, _len = MESSAGES.length; _i < _len; index = ++_i) {
+                    data = MESSAGES[index];
+                    element = $paragraph.get(index);
+                    element.innerText = '';
+                    options = {
+                        delay: data.delay
+                    };
+                    scramble(element, data.text, options);
+                }
+            };
+
+            initialise = function () {
+                var index, text, _i, _len;
+                $animate.click(animate);
+                for (index = _i = 0, _len = MESSAGES.length; _i < _len; index = ++_i) {
+                    text = MESSAGES[index];
+                    $message.append("<p>");
+                }
+                $paragraph = $container.find("p");
+                animate();
+            };
+
+            initialise();
+
+        }).call(this);
+         //@ sourceURL=pen.js
+    </script>
+
+
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-55931307-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+
+</html>

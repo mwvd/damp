@@ -3,7 +3,7 @@
 * { margin: 0; padding: 0; }
 
 html, body {
-    background-color: #FFF;
+    background-color: #0000ff;
     height: 100%;
     width: 100%; 
 }
@@ -106,14 +106,51 @@ $cry-font: "Andale Mono", AndaleMono, "Inconsolata", Consolas, monaco, monospace
     -webkit-backface-visibility: hidden;
 }
 
+.about {
+    width: 70%;
+    height: 100%;
+    background-color: #0000ff;
+    padding: 15%;
+    font-family: $cry-font;
+    font-size: 1em;
+    line-height: 1.4em;
+    color: #FFF;
+    z-index: 99999999999;
+    position: relative;
+}
+
+.about svg {
+    width: 10%;
+    height: auto;
+    display: inline-block;
+    fill: #FFF;
+}
+
+.xbutton {
+    position: absolute;
+    left: 1em;
+    top: 1em;
+}
+
+.tomycity {
+    @include boxflex;
+    width: 45%;
+    height: 3em;
+    border: 1px solid #FFF;
+    margin-top: 1%;
+    z-index: 11;
+    clear: none;
+    white-space: nowrap;
+    letter-spacing: 3px;
+}
+
 .three05 {
     @include boxflex;
     width: 45%;
     height: 3em;
-    /*border: 2px solid #FFF;*/
-    margin-top: 0%;
     margin-bottom: 2%;
     z-index: 11;
+    letter-spacing: 3px;
 }
 
 .toowet {
@@ -125,18 +162,6 @@ $cry-font: "Andale Mono", AndaleMono, "Inconsolata", Consolas, monaco, monospace
     width: 100%;
     height: auto;
     fill: #FFF;
-}
-
-.tomycity {
-    @include boxflex;
-    width: 45%;
-    height: 3em;
-    border: 2px solid #FFF;
-    margin-top: 0%;
-    margin-bottom: 2%;
-    z-index: 11;
-    clear: none;
-    white-space: nowrap;
 }
 
 .somethingwas svg {
@@ -178,4 +203,103 @@ a {
 .tomycity > .gottawrapthis > a:active {
     text-decoration: none;
     color: #FFF;
+}
+
+.three05 > a {
+    display: inline-block;
+}
+
+.three05 > a:link {
+    text-decoration: none;
+    color: #FFF;
+}
+
+.three05 > a:visited {
+    text-decoration: none;
+    color: #FFF;
+}
+.three05 > a:hover {
+    text-decoration: none;
+    color: #FFF;
+    padding-top: 3px;
+    padding-bottom: 2px;
+    border-bottom: #FFF solid 1px;
+}
+.three05 > a:active {
+    text-decoration: none;
+    color: #FFF;
+}
+
+.about > a {
+    text-decoration: none;
+    color: #FFF;
+    padding-top: 3px;
+    padding-bottom: 2px;
+    border-bottom: #FFF solid 1px;
+}
+
+.about > a:link {
+    text-decoration: none;
+    color: #FFF;
+    padding-top: 3px;
+    padding-bottom: 2px;
+    border-bottom: #FFF solid 1px;
+}
+
+.about > a:visited {
+    text-decoration: none;
+    color: #FFF;
+    padding-top: 3px;
+    padding-bottom: 2px;
+    border-bottom: #FFF solid 1px;
+}
+.about > a:hover {
+    text-decoration: none;
+    color: #FFF;
+    padding-top: 3px;
+    padding-bottom: 2px;
+    border-bottom: #FFF solid 1px;
+}
+.about > a:active {
+    text-decoration: none;
+    color: #FFF;
+    padding-top: 3px;
+    padding-bottom: 2px;
+    border-bottom: #FFF solid 1px;
+}
+
+@media (max-device-width:769px) {
+    .ghoul, .info, .saltcicle, .container {
+        display: none;
+    }
+    .nomobile {
+        display: flex;
+        width: 70%;
+        height: 100%;
+        background-color: #0000ff;
+        padding: 15%;
+        font-family: $cry-font;
+        font-size: 1em;
+        line-height: 1.4em;
+        color: #FFF;
+        z-index: 99999999999;
+        }
+}
+
+@media (min-device-width:770px) {
+    .nomobile {
+        display: none;
+        }
+}
+
+.fifty6 {
+    position: relative;
+    background-color: #0000ff;
+    left: 0.2em;
+    bottom: 0em;
+}
+
+.fifty6 img {
+    width: 25px;
+    height: 25px;
 }
