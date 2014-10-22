@@ -11,6 +11,8 @@ this is an exploration of what it is like to have been born at the end of a mill
 
 presented in 6 experimental poems
 
+[damp](http://www.d-a-m-p.com/)
+
 
 ```
 
@@ -21,7 +23,7 @@ damp magazine {
 ```
 
 
-Damp is a project conceived and designed by [Mackenzie Davidson](http://mvckenzie.com/) and [Peter Li](http://peters.graphics/), developed in collaboration with [Theresa Ma](http://theresa-ma.com), featuring work by [Theodore Fox](http://theodorefox.com/), Susie Kim, and Ben Milligan.
+Conceived and designed by [Mackenzie Davidson](http://mvckenzie.com/) and [Peter Li](http://peters.graphics/), developed in collaboration with [Theresa Ma](http://theresa-ma.com), featuring work by [Theodore Fox](http://theodorefox.com/), Susie Kim, and Ben Milligan.
 
 
 (◕‿◕✿)
