@@ -30,3 +30,18 @@ Conceived and designed by [Mackenzie Davidson](http://mvckenzie.com/) and [Peter
 
 
 1994 - 201X
+
+
+UPDATE DEC 15 / 15: 
+DAMP IS GONE
+you can view an archive of it here maybe:
+[damp](http://mwvd.github.io/damp/)
+
+
+```
+
+REMEMBER {
+        EVERYTHING IS TEMPORARY
+}
+
+```
