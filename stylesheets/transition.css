@@ -5,12 +5,12 @@
 .spin  {
         -webkit-transform: rotate(360deg);
         -webkit-animation-name: spin;
-        -webkit-animation-duration: 1s;
+        -webkit-animation-duration: 20s;
         -webkit-animation-iteration-count:  infinite;
         -webkit-animation-timing-function: linear;
         -moz-transform: rotate(360deg);
         -moz-animation-name: spin;
-        -moz-animation-duration: 1s;
+        -moz-animation-duration: 20s;
         -moz-animation-iteration-count:  infinite;
         -moz-animation-timing-function: linear;        
 }
